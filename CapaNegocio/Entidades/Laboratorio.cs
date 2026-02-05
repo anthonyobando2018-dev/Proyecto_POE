@@ -53,7 +53,7 @@ namespace SRLCProyectoPOE.Entidades
             get { return estado; }
             set { estado = value; }
         }
-    }
+    } 
 }
 
 
