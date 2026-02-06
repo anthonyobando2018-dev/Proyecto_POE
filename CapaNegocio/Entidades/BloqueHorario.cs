@@ -4,22 +4,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SRLCProyectoPOE.Entidades
+namespace CapaNegocio.Entidades
 {
     public class BloqueHorario
     {
-        public TimeOnly HoraInicio { get; set; }
-        public TimeOnly HoraFin {  get; set; }
+        public TimeOnly HoraInicio { get; private set; }
+        public TimeOnly HoraFin {  get; private set; }
 
         public BloqueHorario(TimeOnly horaInicio, TimeOnly horaFin) 
         {
+            ValidarFranjaHoraria(horaInicio, horaFin);
+
             HoraInicio = horaInicio;
             HoraFin = horaFin;
         }
 
-        public override string ToString() 
+        private void ValidarFranjaHoraria(TimeOnly horaInicio, TimeOnly horaFin)
         {
-            return $"{HoraInicio}-{HoraFin}";
+            if (horaInicio >= horaFin)
+                throw new ArgumentException("La hora de inicio del rango horario no puede ser mayor o igual que la hora de fin!");
+        }
+
+        public override string ToString()
+        {
+            return $"{HoraFin}-{HoraFin}";
         }
     }
 }

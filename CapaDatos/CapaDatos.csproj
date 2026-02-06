@@ -11,4 +11,10 @@
     <PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="CapaNegocio">
+      <HintPath>..\CapaNegocio\bin\Debug\net8.0\CapaNegocio.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
