@@ -14,10 +14,13 @@ namespace Proyecto_POE
 
         private void btnPrincipal_Click(object sender, EventArgs e)
         {
+            btnPrincipal.ForeColor = Color.White;
+            btnPrincipal.FillColor = Color.FromArgb(21, 93, 252);
             FrmPrincipal frm = new FrmPrincipal();
             AbrirFormEnPanel(frm);
         }
 
+        
 
         private void AbrirFormEnPanel(Form formulario)
         {
@@ -31,6 +34,7 @@ namespace Proyecto_POE
 
         private void btnLaboratorio_Click(object sender, EventArgs e)
         {
+
             FrmLaboratorio frm = new FrmLaboratorio();
             AbrirFormEnPanel(frm);
         }

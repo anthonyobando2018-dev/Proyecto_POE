@@ -34,18 +34,18 @@
             // guna2HtmlLabel1
             // 
             guna2HtmlLabel1.BackColor = Color.Transparent;
-            guna2HtmlLabel1.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            guna2HtmlLabel1.Location = new Point(12, 12);
+            guna2HtmlLabel1.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel1.Location = new Point(24, 12);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(331, 32);
-            guna2HtmlLabel1.TabIndex = 0;
-            guna2HtmlLabel1.Text = "Sitema de Gestion  de Laboratorios\r\n";
+            guna2HtmlLabel1.Size = new Size(264, 34);
+            guna2HtmlLabel1.TabIndex = 2;
+            guna2HtmlLabel1.Text = "\r\nGestion  de Laboratorios\r\n";
             // 
             // FrmPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(737, 466);
+            ClientSize = new Size(1002, 727);
             Controls.Add(guna2HtmlLabel1);
             Name = "FrmPrincipal";
             Text = "FrmPrincipal";

@@ -67,7 +67,7 @@
             panelMenu.Location = new Point(0, 2);
             panelMenu.Name = "panelMenu";
             panelMenu.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            panelMenu.Size = new Size(208, 581);
+            panelMenu.Size = new Size(208, 720);
             panelMenu.TabIndex = 0;
             // 
             // btnReportes
@@ -80,14 +80,17 @@
             btnReportes.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnReportes.FillColor = Color.Transparent;
             btnReportes.FocusedColor = Color.Transparent;
-            btnReportes.Font = new Font("Segoe UI", 9F);
+            btnReportes.Font = new Font("Cascadia Mono SemiBold", 12F, FontStyle.Bold);
             btnReportes.ForeColor = Color.Black;
+            btnReportes.Image = CapaPresentacion.Properties.Resources.reportes;
+            btnReportes.ImageAlign = HorizontalAlignment.Left;
             btnReportes.Location = new Point(12, 391);
             btnReportes.Name = "btnReportes";
             btnReportes.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnReportes.Size = new Size(180, 45);
             btnReportes.TabIndex = 8;
             btnReportes.Text = "Reportes ";
+            btnReportes.TextAlign = HorizontalAlignment.Left;
             btnReportes.Click += btnReportes_Click;
             // 
             // btnConsultas
@@ -100,14 +103,17 @@
             btnConsultas.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnConsultas.FillColor = Color.Transparent;
             btnConsultas.FocusedColor = Color.Transparent;
-            btnConsultas.Font = new Font("Segoe UI", 9F);
+            btnConsultas.Font = new Font("Cascadia Mono SemiBold", 12F, FontStyle.Bold);
             btnConsultas.ForeColor = Color.Black;
+            btnConsultas.Image = CapaPresentacion.Properties.Resources.consulta;
+            btnConsultas.ImageAlign = HorizontalAlignment.Left;
             btnConsultas.Location = new Point(12, 340);
             btnConsultas.Name = "btnConsultas";
             btnConsultas.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnConsultas.Size = new Size(180, 45);
             btnConsultas.TabIndex = 8;
             btnConsultas.Text = "Consultas";
+            btnConsultas.TextAlign = HorizontalAlignment.Left;
             btnConsultas.Click += btnConsultas_Click;
             // 
             // btnReservas
@@ -120,14 +126,17 @@
             btnReservas.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnReservas.FillColor = Color.Transparent;
             btnReservas.FocusedColor = Color.Transparent;
-            btnReservas.Font = new Font("Segoe UI", 9F);
+            btnReservas.Font = new Font("Cascadia Mono SemiBold", 12F, FontStyle.Bold);
             btnReservas.ForeColor = Color.Black;
+            btnReservas.Image = CapaPresentacion.Properties.Resources.reserva;
+            btnReservas.ImageAlign = HorizontalAlignment.Left;
             btnReservas.Location = new Point(12, 289);
             btnReservas.Name = "btnReservas";
             btnReservas.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnReservas.Size = new Size(180, 45);
             btnReservas.TabIndex = 9;
             btnReservas.Text = "Reservas";
+            btnReservas.TextAlign = HorizontalAlignment.Left;
             btnReservas.Click += btnReservas_Click;
             // 
             // btnDocentes
@@ -140,14 +149,17 @@
             btnDocentes.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnDocentes.FillColor = Color.Transparent;
             btnDocentes.FocusedColor = Color.Transparent;
-            btnDocentes.Font = new Font("Segoe UI", 9F);
+            btnDocentes.Font = new Font("Cascadia Mono SemiBold", 12F, FontStyle.Bold);
             btnDocentes.ForeColor = Color.Black;
+            btnDocentes.Image = CapaPresentacion.Properties.Resources.Docente;
+            btnDocentes.ImageAlign = HorizontalAlignment.Left;
             btnDocentes.Location = new Point(12, 238);
             btnDocentes.Name = "btnDocentes";
             btnDocentes.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnDocentes.Size = new Size(180, 45);
             btnDocentes.TabIndex = 8;
             btnDocentes.Text = "Docentes";
+            btnDocentes.TextAlign = HorizontalAlignment.Left;
             btnDocentes.Click += btnDocentes_Click;
             // 
             // btnLaboratorio
@@ -160,14 +172,17 @@
             btnLaboratorio.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnLaboratorio.FillColor = Color.Transparent;
             btnLaboratorio.FocusedColor = Color.Transparent;
-            btnLaboratorio.Font = new Font("Segoe UI", 9F);
+            btnLaboratorio.Font = new Font("Cascadia Mono SemiBold", 12F, FontStyle.Bold);
             btnLaboratorio.ForeColor = Color.Black;
+            btnLaboratorio.Image = CapaPresentacion.Properties.Resources.laboratorio;
+            btnLaboratorio.ImageAlign = HorizontalAlignment.Left;
             btnLaboratorio.Location = new Point(12, 187);
             btnLaboratorio.Name = "btnLaboratorio";
             btnLaboratorio.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btnLaboratorio.Size = new Size(180, 45);
             btnLaboratorio.TabIndex = 7;
             btnLaboratorio.Text = "Laboratorios ";
+            btnLaboratorio.TextAlign = HorizontalAlignment.Left;
             btnLaboratorio.Click += btnLaboratorio_Click;
             // 
             // btnPrincipal
@@ -180,8 +195,10 @@
             btnPrincipal.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnPrincipal.FillColor = Color.Transparent;
             btnPrincipal.FocusedColor = Color.Transparent;
-            btnPrincipal.Font = new Font("Segoe UI", 9F);
+            btnPrincipal.Font = new Font("Cascadia Mono SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnPrincipal.ForeColor = Color.Black;
+            btnPrincipal.Image = CapaPresentacion.Properties.Resources.prioncipal;
+            btnPrincipal.ImageAlign = HorizontalAlignment.Left;
             btnPrincipal.Location = new Point(12, 136);
             btnPrincipal.Name = "btnPrincipal";
             btnPrincipal.ShadowDecoration.CustomizableEdges = customizableEdges12;
@@ -193,17 +210,18 @@
             // panelPrincipal
             // 
             panelPrincipal.CustomizableEdges = customizableEdges15;
+            panelPrincipal.Font = new Font("Cascadia Code", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             panelPrincipal.Location = new Point(205, 2);
             panelPrincipal.Name = "panelPrincipal";
             panelPrincipal.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            panelPrincipal.Size = new Size(756, 581);
+            panelPrincipal.Size = new Size(1029, 720);
             panelPrincipal.TabIndex = 1;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(963, 584);
+            ClientSize = new Size(1232, 721);
             Controls.Add(panelPrincipal);
             Controls.Add(panelMenu);
             Name = "Form1";
