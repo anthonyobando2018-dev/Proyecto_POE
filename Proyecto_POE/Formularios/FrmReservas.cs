@@ -16,5 +16,10 @@ namespace CapaPresentacion.Formularios
         {
             InitializeComponent();
         }
+
+        private void guna2HtmlLabel11_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
