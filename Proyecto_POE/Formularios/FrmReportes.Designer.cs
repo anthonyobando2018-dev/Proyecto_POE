@@ -28,18 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
+            guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             SuspendLayout();
+            // 
+            // guna2HtmlLabel2
+            // 
+            guna2HtmlLabel2.BackColor = Color.Transparent;
+            guna2HtmlLabel2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel2.Location = new Point(12, 49);
+            guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            guna2HtmlLabel2.Size = new Size(374, 19);
+            guna2HtmlLabel2.TabIndex = 2;
+            guna2HtmlLabel2.Text = "Sistema de Gestión de Reservas de Laboratorios de Cómputo";
             // 
             // FrmReportes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(737, 466);
+            Controls.Add(guna2HtmlLabel2);
             Name = "FrmReportes";
             Text = "FrmReportes";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
     }
 }
