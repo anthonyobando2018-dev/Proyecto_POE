@@ -27,6 +27,30 @@ namespace CapaDeDatos.Interfaces
             return id_generado;
         }
 
+        public Laboratorio? ObtenerPorId(int id)
+        {
+            List<Parametro> parametros = new List<Parametro>()
+            {
+               new Parametro("p_id_laboratorio", SqlDbType.Int, id)
+            };
+
+            var resultado = _dbQueryManager.EjecutaSP_Query("fn_obtenerLaboratorioPorId", parametros);
+
+            List<Laboratorio> laboratorios = new List<Laboratorio>();
+
+            foreach (DataRow fila in resultado.Rows)
+            {
+                int id_laboratorio = Convert.ToInt32(fila["id_laboratorio"]);
+                string nombre = fila["nombre"].ToString() ?? string.Empty;
+                int capacidad_maxima = Convert.ToInt32(fila["cantidad_estudiante"]);
+                int estado = Convert.ToInt32(fila["estado"].ToString());
+
+                laboratorios.Add(new Laboratorio(id_laboratorio, nombre, capacidad_maxima, estado));
+            }
+
+            return laboratorios.Count > 0 ? laboratorios.ElementAt(0) : null;
+        }
+
         public List<Laboratorio> ObtenerTodos()
         {
             var resultado = _dbQueryManager.EjecutaSP_Query("fn_obtenerLaboratoriosActivos", new List<Parametro>());
@@ -72,31 +96,5 @@ namespace CapaDeDatos.Interfaces
 
             return resultado;
         }
-
-        public Laboratorio? ObtenerPorId(int id)
-        {
-            List<Parametro> parametros = new List<Parametro>()
-            {
-               new Parametro("p_id_laboratorio", SqlDbType.Int, id)
-            };
-
-            var resultado = _dbQueryManager.EjecutaSP_Query("fn_obtenerLaboratorioPorId", parametros);
-
-            List<Laboratorio> laboratorios = new List<Laboratorio>();
-
-            foreach (DataRow fila in resultado.Rows)
-            {
-                int id_laboratorio = Convert.ToInt32(fila["id_laboratorio"]);
-                string nombre = fila["nombre"].ToString() ?? string.Empty;
-                int capacidad_maxima = Convert.ToInt32(fila["cantidad_estudiante"]);
-                int estado = Convert.ToInt32(fila["estado"].ToString());
-
-                laboratorios.Add(new Laboratorio(id_laboratorio, nombre, capacidad_maxima, estado));
-            }
-
-            return laboratorios.Count > 0 ? laboratorios.ElementAt(0) : null;
-        }
-
-
     }
 }

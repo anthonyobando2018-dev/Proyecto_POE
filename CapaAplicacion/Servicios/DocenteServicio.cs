@@ -12,6 +12,7 @@ namespace CapaAplicacion.Servicios
     public class DocenteServicio
     {
         private readonly DocenteInterface _docenteInterface;
+
         public DocenteServicio(DocenteInterface docenteInterface)
         {
             _docenteInterface = docenteInterface;

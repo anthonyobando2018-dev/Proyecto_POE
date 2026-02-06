@@ -14,7 +14,7 @@ namespace CapaDeDatos.AccesoDatos
             _dbConnectionString = dbConnectionString;
         }
 
-        public SqlConnection CrearConexion()
+        internal SqlConnection CrearConexion()
         {
             return new SqlConnection(_dbConnectionString);
         }

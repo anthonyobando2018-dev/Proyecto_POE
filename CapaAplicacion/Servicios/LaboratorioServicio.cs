@@ -2,6 +2,7 @@
 using CapaNegocio.Entidades;
 using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
@@ -12,6 +13,7 @@ namespace CapaAplicacion.Servicios
     public class LaboratorioServicio
     {
         private readonly LaboratorioInterface _laboratorioInterface;
+
         public LaboratorioServicio(LaboratorioInterface laboratorioInterface)
         {
             _laboratorioInterface = laboratorioInterface;
