@@ -82,9 +82,10 @@
             // guna2HtmlLabel3
             // 
             guna2HtmlLabel3.BackColor = Color.Transparent;
+            guna2HtmlLabel3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel3.Location = new Point(13, 13);
             guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            guna2HtmlLabel3.Size = new Size(102, 17);
+            guna2HtmlLabel3.Size = new Size(119, 19);
             guna2HtmlLabel3.TabIndex = 4;
             guna2HtmlLabel3.Text = "Nuevo Laboratorio";
             // 

@@ -105,9 +105,10 @@
             // guna2HtmlLabel3
             // 
             guna2HtmlLabel3.BackColor = Color.Transparent;
+            guna2HtmlLabel3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel3.Location = new Point(13, 12);
             guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            guna2HtmlLabel3.Size = new Size(160, 17);
+            guna2HtmlLabel3.Size = new Size(188, 19);
             guna2HtmlLabel3.TabIndex = 0;
             guna2HtmlLabel3.Text = "Nueva Reserva de Laboratorio";
             // 
