@@ -37,9 +37,9 @@ namespace CapaAplicacion.Servicios
             return _docenteInterface.ObtenerPorCedula(cedula) ?? throw new ApplicationException("Docente no encontrado con esa cedula.");
         }
 
-        public List<Docente> ListarTodos()
+        public List<Docente> ListarTodos(int? estado = null)
         {
-            return _docenteInterface.ObtenerTodos();
+            return _docenteInterface.ObtenerTodos(estado);
         }
 
         public Docente BuscarPorId(int idDocente)

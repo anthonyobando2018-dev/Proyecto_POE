@@ -81,9 +81,12 @@ namespace CapaDeDatos.Interfaces
             return docentes.Count > 0 ? docentes.ElementAt(0) : null;
         }
 
-        public List<Docente> ObtenerTodos()
+        public List<Docente> ObtenerTodos(int? estado_docente = null)
         {
-            var resultado = _dbQueryManager.EjecutaSP_Query("sp_listar_docentes_activos", new List<Parametro>());
+            var parametros = new List<Parametro>();
+            if (estado_docente != null) parametros.Add(new Parametro("@p_estado", SqlDbType.Int, estado_docente));
+
+            var resultado = _dbQueryManager.EjecutaSP_Query("sp_listar_docentes_activos", parametros);
 
             List<Docente> docentes = new List<Docente>();
 

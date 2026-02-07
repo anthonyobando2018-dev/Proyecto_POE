@@ -46,9 +46,9 @@ namespace CapaAplicacion.Servicios
             return _reservaInterface.ObtenerPorId(id) ?? throw new ApplicationException("Reserva no encontrado con ese id.");
         }
 
-        public List<Reserva> ListarTodas()
+        public List<Reserva> ListarTodas(int? estado = null)
         {
-            return _reservaInterface.ObtenerTodos();
+            return _reservaInterface.ObtenerTodos(estado);
         }
 
         /* Actualiza a estado cancelado (solo reservas activas) */

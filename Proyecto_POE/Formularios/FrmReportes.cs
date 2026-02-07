@@ -23,6 +23,16 @@ namespace CapaPresentacion.Formularios
 
         private void btnGenerarReporte_Click(object sender, EventArgs e)
         {
+            try
+            {
+                var fechaInicioI = DateOnly.FromDateTime(fechaInicio.Value);
+                var fechaFinI = DateOnly.FromDateTime(fechaFin.Value);
+                rtbReserva.Text = _reporteServicio.GenerarReporte(fechaInicioI, fechaFinI);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
 
         }
     }

@@ -51,9 +51,14 @@ namespace CapaDeDatos.Interfaces
             return laboratorios.Count > 0 ? laboratorios.ElementAt(0) : null;
         }
 
-        public List<Laboratorio> ObtenerTodos()
+        public List<Laboratorio> ObtenerTodos(int? estado_laboratorio = null)
         {
-            var resultado = _dbQueryManager.EjecutaSP_Query("sp_listar_laboratorios_activos", new List<Parametro>());
+            var parametros = new List<Parametro>();
+            if (estado_laboratorio != null) parametros.Add(new Parametro("@p_estado", SqlDbType.Int, estado_laboratorio));
+           
+            var resultado = _dbQueryManager.EjecutaSP_Query("sp_listar_laboratorios_activos", parametros);
+
+
 
             List<Laboratorio> laboratorios = new List<Laboratorio>();
 

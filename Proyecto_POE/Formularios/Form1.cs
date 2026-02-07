@@ -69,7 +69,7 @@ namespace Proyecto_POE
         {
             ResetearBotones();
             ActivarBoton(btnReservas);
-            FrmReservas frm = new FrmReservas(_reservaServicio);
+            FrmReservas frm = new FrmReservas(_reservaServicio, _laboratorioServicio, _docenteServicio);
             AbrirFormEnPanel(frm);
         }
 

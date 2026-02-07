@@ -41,9 +41,9 @@ namespace CapaAplicacion.Servicios
             return _laboratorioInterface.ActualizarEstado(idLaboratorio, 0);
         }
 
-        public List<Laboratorio> ListarTodos()
+        public List<Laboratorio> ListarTodos(int? estado = null)
         {
-            return _laboratorioInterface.ObtenerTodos();
+            return _laboratorioInterface.ObtenerTodos(estado);
         }
     }
 }

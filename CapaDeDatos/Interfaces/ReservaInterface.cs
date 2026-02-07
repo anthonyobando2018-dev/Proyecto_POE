@@ -69,9 +69,12 @@ namespace CapaDeDatos.Interfaces
             return reservas.Count > 0 ? reservas.ElementAt(0) : null;
         }
 
-        public List<Reserva> ObtenerTodos()
+        public List<Reserva> ObtenerTodos(int? estado_reserva = null)
         {
-            var resultado = _dbQueryManager.EjecutaSP_Query("sp_listar_reservas_activas", new List<Parametro>());
+            var parametros = new List<Parametro>();
+            if (estado_reserva != null) parametros.Add(new Parametro("@p_estado", SqlDbType.Int, estado_reserva));
+
+            var resultado = _dbQueryManager.EjecutaSP_Query("sp_listar_reservas_activas", parametros);
 
             List<Reserva> reservas = new List<Reserva>();
 
