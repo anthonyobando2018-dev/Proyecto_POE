@@ -290,6 +290,7 @@
             btnRegistrar.TabIndex = 15;
             btnRegistrar.Text = "Registrar Reserva";
             btnRegistrar.TextAlign = HorizontalAlignment.Right;
+            btnRegistrar.Click += btnRegistrar_Click;
             // 
             // guna2GradientPanel1
             // 
@@ -341,6 +342,7 @@
             btnEliminar.TabIndex = 33;
             btnEliminar.Text = "Eliminar";
             btnEliminar.TextAlign = HorizontalAlignment.Left;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // btnActualizar
             // 
@@ -363,6 +365,7 @@
             btnActualizar.TabIndex = 32;
             btnActualizar.Text = "Actualizar";
             btnActualizar.TextAlign = HorizontalAlignment.Left;
+            btnActualizar.Click += btnActualizar_Click;
             // 
             // btnNuevo
             // 
@@ -385,6 +388,7 @@
             btnNuevo.TabIndex = 31;
             btnNuevo.Text = "Nuevo";
             btnNuevo.TextAlign = HorizontalAlignment.Left;
+            btnNuevo.Click += btnNuevo_Click;
             // 
             // guna2HtmlLabel1
             // 
