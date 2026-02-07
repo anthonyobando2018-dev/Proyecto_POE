@@ -24,85 +24,25 @@ namespace CapaPresentacion.Formularios
             _docenteServicio = docenteServicio;
         }
 
-        private void btnRegistrar_Click(object sender, EventArgs e)
+        private void FrmDocente_Load(object sender, EventArgs e)
         {
-            /*try
-            {
-                if (txtCodigo.Text != string.Empty)
-                    obj_cln_est.IdEstudiante = int.Parse(txtCodigo.Text);
-                obj_cln_est.Cedula = txtCedula.Text;
-                obj_cln_est.Nombres = txtNombres.Text;
-                obj_cln_est.Apellidos = txtApellidos.Text;
-                obj_cln_est.Especialidad = txtEspecialidad.Text;
-                if (cmbEstado.SelectedIndex == 0)
-                    obj_cln_est.Genero = 'M';
-                else
-                    obj_cln_est.Genero = 'F';
-
-
-                //Si es nuevo
-                if (is_nuevo)
-                {
-                    ValidarEstudiante();
-                    if (obj_cln_est.InsertarEstudiante())
-                    {
-                        MessageBox.Show("Estudiabte creado");
-                        is_nuevo = false;
-                        LimpiarControles();
-                    }
-                    else MessageBox.Show("No se pudo crear estudiante");
-
-                }
-                else
-                {
-                    //actualizar estudiante 
-                    ValidarEstudiante();
-                    obj_cln_est.ActualizarEstudiante();
-                    //Actualizar estado del Boton
-                    btnGrabar.Text = "Guardar";
-                    //Mandar un mensaje 
-                    MessageBox.Show("Estudiante Actualizado");
-                    LimpiarControles();
-                }
-                btnNuevo.Enabled = true;
-                btnGrabar.Enabled = false;
-                btnEliminar.Enabled = false;
-                //Cargar datos al grid
-                CargarEstudiantesGrid();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al grabar los datos del estudiante  --> " + ex.Message);
-            }*/
+            CargarDocentesGrid();
+            LimpiarControles();
         }
 
-        private void btnActualizar_Click(object sender, EventArgs e)
+        private void CargarDocentesGrid()
         {
-            /*try
+            try
             {
-                if (!int.TryParse(txtCodigo.Text, out int codigo))
-                {
-                    MessageBox.Show("Ingrese un codigo valido para actualizar.");
-                    return;
-                }
+                dgvDocentes.DataSource = null;
+                var docentes = _docenteServicio.ListarTodos();
+                dgvDocentes.DataSource = docentes;
 
-                Laboratorio lab = new Laboratorio
-                {
-                    IdLaboratorio = codigo,
-                    Nombre = txtNombre.Text.Trim(),
-                    CapacidadMaxima = (int)numCapacidad.Value,
-                    Estado = chkActivo.Checked
-                };
-
-                LaboratorioAdministradora.ActualizarLaboratorio(lab);
-                MessageBox.Show("Laboratorio actualizado correctamente.");
-                LimpiarCampos();
-                ListarLaboratorios();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
-            }*/
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -111,11 +51,7 @@ namespace CapaPresentacion.Formularios
             {
                 //is_nuevo = true;
                 LimpiarControles();
-
                 btnRegistrar.Enabled = true;
-                btnEliminar.Enabled = false;
-                btnNuevo.Enabled = true;
-                btnActualizar.Enabled = false;
                 txtCedula.Focus();
 
             }
@@ -125,83 +61,143 @@ namespace CapaPresentacion.Formularios
             }
         }
 
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            RegistrarNuevoDocente();
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            ActualizarDatosDeDocente();
+        }
+
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            /*try
-            {
-                obj_cln_est.IdEstudiante = int.Parse(txtCodigo.Text);
-
-                if (obj_cln_est.EliminarEstudiante())
-                {
-                    MessageBox.Show("Docente Eliminado");
-                    CargarEstudiantesGrid();
-                    LimpiarControles();
-                }
-                else MessageBox.Show("No se pudo eliminar");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error -> " + ex.Message);
-            }*/
+            EliminarDocente();
         }
-
-
-        private void dgvDocente_CellClick(object sender, DataGridViewCellEventArgs e)
+        
+        private void dgvDocentes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            /*try
-            {
-                if (e.RowIndex < 0 || e.RowIndex >= dgvDocente.Rows.Count)
-                    return;
-                DataGridViewRow fila = dgvDocente.Rows[e.RowIndex];
-
-                //txtCodigo.Text = fila.Cells["id_estudiante"].Value?.ToString() ?? "";
-                txtCedula.Text = fila.Cells["cedula"].Value?.ToString() ?? "";
-                txtNombres.Text = fila.Cells["nombres"].Value?.ToString() ?? "";
-                txtApellidos.Text = fila.Cells["apellidos"].Value?.ToString() ?? "";
-                txtEspecialidad.Text = fila.Cells["especialidad"].Value?.ToString() ?? "";
-                // Manejo de género
-                string estado = fila.Cells["genero"].Value?.ToString();
-                if (estado == "Activo")
-                    cmbEstado.SelectedIndex = 0; // Activo
-                else if (estado == "Inactivo")
-                    cmbEstado.SelectedIndex = 1; //Inactivo
-                else
-                    cmbEstado.SelectedIndex = -1;
-
-                is_nuevo = false;
-
-                btnRegistrar.Enabled = false;
-                btnEliminar.Enabled = true;
-                btnNuevo.Enabled = true;
-                btnActualizar.Enabled = true;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error -> " + ex.Message);
-            }*/
+            CargarDocenteSeleccionado(e);
+            btnActualizar.Enabled = true;
+            btnEliminar.Enabled = true;
+            btnRegistrar.Enabled = false;
         }
 
-        private void LimpiarControles()
-        {
-            txtCedula.Text = string.Empty;
-            txtNombres.Text = string.Empty;
-            txtApellidos.Text = string.Empty;
-            txtEspecialidad.Text = string.Empty;
-            cmbEstado.SelectedIndex = 0;
-
-        }
-
-        private void CargarEstudiantesGrid()
+        
+        private void RegistrarNuevoDocente()
         {
             try
             {
-                dgvDocente.DataSource = null;
-                //dgvDocente.DataSource = obj_cln_est.GetListadoEstudiantes();
+                // obtenemos los valores de los campos del formulario
+                string cedula = txtCedula.Text.Trim();
+                string nombres = txtEspecialidad.Text.Trim();
+                string apellidos = txtApellidos.Text.Trim();
+                string especialidad = txtNombres.Text.Trim();
+
+                // llamamos al metodo del servicio que guarda el registro
+                var idNuevoEstudiante = _docenteServicio.Registrar(cedula, nombres, apellidos, especialidad);
+
+                MessageBox.Show($"Nuevo estudiante con id: {idNuevoEstudiante} registrado!");
+
+                CargarDocentesGrid();
+
+                // SalirModoEdicion();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void ActualizarDatosDeDocente()
+        {
+            try
+            {
+                string cedula = txtCedula.Text.Trim();
+                string nombres = txtNombres.Text.Trim();
+                string apellidos = txtApellidos.Text.Trim();
+                string especialidad = txtEspecialidad.Text.Trim();
+                bool estado = cmbEstado.SelectedIndex == 0 ? true : false;
+
+                Docente docente = _docenteServicio.BuscarPorCedula(cedula);
+
+                _docenteServicio.ActualizarDatos(docente.IdDocente, cedula, nombres, apellidos, especialidad, estado);
+
+                CargarDocentesGrid();
+
+                btnActualizar.Enabled = false;
+                btnEliminar.Enabled = false;
+
+                MessageBox.Show("Datos de docentes actualizado correctamente!", "Registro actualizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void EliminarDocente()
+        {
+            try
+            {
+                Docente eliminado = _docenteServicio.BuscarPorCedula(txtCedula.Text);
+                _docenteServicio.Inactivar(eliminado.IdDocente);
+
+                CargarDocentesGrid();
+
+                btnActualizar.Enabled = false;
+                btnEliminar.Enabled = false;
+
+                MessageBox.Show("Docente inactivado correctamente", "Registro eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void CargarDocenteSeleccionado(DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                // obtenemos la fila seleccionada y sus datos para cargarlo en el formulario
+                if (e.RowIndex >= 0)
+                {
+                    var docenteSeleccionado = dgvDocentes.Rows[e.RowIndex].Cells;
+
+                    // txtCodigo.Text = ObtenerValorDeColumna(estudianteSeleccionado, "idDocente");
+                    txtCedula.Text = ObtenerValorDeColumna(docenteSeleccionado, "cedula");
+                    txtEspecialidad.Text = ObtenerValorDeColumna(docenteSeleccionado, "nombres");
+                    txtApellidos.Text = ObtenerValorDeColumna(docenteSeleccionado, "apellidos");
+                    txtNombres.Text = ObtenerValorDeColumna(docenteSeleccionado, "especialidad");
+                    cmbEstado.SelectedIndex = bool.Parse(ObtenerValorDeColumna(docenteSeleccionado, "estado")) ? 0 : 1;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private string ObtenerValorDeColumna(DataGridViewCellCollection fila, string campo)
+        {
+            return fila[campo].Value.ToString() ?? string.Empty;
+        }
+
+        private void LimpiarControles()
+        {
+            txtCedula.Text = string.Empty;
+            txtEspecialidad.Text = string.Empty;
+            txtApellidos.Text = string.Empty;
+            txtNombres.Text = string.Empty;
+            cmbEstado.SelectedIndex = 0;
+
+        }
+
+
+
+
     }
 }

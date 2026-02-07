@@ -25,12 +25,12 @@ namespace CapaAplicacion.Servicios
             _reservaValidador = new ReservaValidadorServicio(reservaInterface, laboratorioInterface);
         }
 
-        public void Reservar(int idDocente, int idLaboratorio, string asunto, int cantidadEstudiantes, DateOnly fechaReserva, TimeOnly horaInicio, TimeOnly horaFin)
+        public int Reservar(int idDocente, int idLaboratorio, string asunto, int cantidadEstudiantes, DateOnly fechaReserva, TimeOnly horaInicio, TimeOnly horaFin)
         {
             _reservaValidador.ValidarReservaNoSolapada(idDocente, idLaboratorio, fechaReserva, horaInicio, horaFin);
             _reservaValidador.ValidarReservaNoExcedeCapacidadDeLaboratorio(idLaboratorio, cantidadEstudiantes);
             Reserva nuevoReserva = new Reserva(idDocente, idLaboratorio, asunto, cantidadEstudiantes, fechaReserva, new BloqueHorario(horaInicio, horaFin));
-            _reservaInterface.Guardar(nuevoReserva);
+            return _reservaInterface.Guardar(nuevoReserva);
         }
 
         public void ActualizarDatos(int idReserva, int idDocente, int idLaboratorio, string asunto, int cantidadEstudiantes, DateOnly fechaReserva, TimeOnly horaInicio, TimeOnly horaFin, int estado)

@@ -19,10 +19,10 @@ namespace CapaAplicacion.Servicios
             _laboratorioInterface = laboratorioInterface;
         }
 
-        public void Registrar(string nombres, int capacidadMaxima)
+        public int Registrar(string nombres, int capacidadMaxima)
         {
             Laboratorio nuevoLaboratorio = new Laboratorio(nombres, capacidadMaxima);
-            _laboratorioInterface.Guardar(nuevoLaboratorio);
+            return _laboratorioInterface.Guardar(nuevoLaboratorio);
         }
 
         public void ActualizarDatos(int idLaboratorio, string nombre, int capacidadMaxima, int estado)

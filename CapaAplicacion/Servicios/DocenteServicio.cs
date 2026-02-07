@@ -18,11 +18,11 @@ namespace CapaAplicacion.Servicios
             _docenteInterface = docenteInterface;
         }
 
-        public void Registrar(string cedula, string nombres, string apellidos, string especialidad)
+        public int Registrar(string cedula, string nombres, string apellidos, string especialidad)
         {
             ValidarCedulaDuplicada(cedula);
             Docente nuevoDocente = new Docente(cedula, nombres, apellidos, especialidad);
-            _docenteInterface.Guardar(nuevoDocente);
+            return _docenteInterface.Guardar(nuevoDocente);
         }
 
         public void ActualizarDatos(int idDocente, string cedula, string nombres, string apellidos, string especialidad, bool estado)
