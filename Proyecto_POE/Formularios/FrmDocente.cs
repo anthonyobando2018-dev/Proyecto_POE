@@ -1,4 +1,4 @@
-﻿using SRLCProyectoPOE.Entidades;
+﻿using CapaNegocio.Entidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

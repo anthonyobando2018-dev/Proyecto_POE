@@ -13,6 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CapaAplicacion\CapaAplicacion.csproj" />
+    <ProjectReference Include="..\CapaDeDatos\CapaDeDatos.csproj" />
     <ProjectReference Include="..\CapaNegocio\CapaNegocio.csproj" />
   </ItemGroup>
 
