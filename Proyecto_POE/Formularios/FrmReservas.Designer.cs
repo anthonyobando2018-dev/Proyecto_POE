@@ -49,6 +49,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -57,11 +59,9 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             guna2HtmlLabel18 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
+            dgvReserva = new Guna.UI2.WinForms.Guna2DataGridView();
             cmbDocente = new Guna.UI2.WinForms.Guna2ComboBox();
             cmbLab = new Guna.UI2.WinForms.Guna2ComboBox();
             dtpDiaReserva = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -70,6 +70,8 @@
             cmbHoraFin = new Guna.UI2.WinForms.Guna2ComboBox();
             btnRegistrar = new Guna.UI2.WinForms.Guna2Button();
             guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            guna2HtmlLabel19 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            cmbEstadoReserva = new Guna.UI2.WinForms.Guna2ComboBox();
             btnEliminar = new Guna.UI2.WinForms.Guna2Button();
             btnActualizar = new Guna.UI2.WinForms.Guna2Button();
             btnNuevo = new Guna.UI2.WinForms.Guna2Button();
@@ -92,10 +94,8 @@
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            cmbEstadoReserva = new Guna.UI2.WinForms.Guna2ComboBox();
-            guna2HtmlLabel19 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2GradientPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvReserva).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nruCantidadEstudiantes).BeginInit();
             guna2GradientPanel1.SuspendLayout();
             guna2Panel1.SuspendLayout();
@@ -104,7 +104,7 @@
             // guna2GradientPanel2
             // 
             guna2GradientPanel2.Controls.Add(guna2HtmlLabel18);
-            guna2GradientPanel2.Controls.Add(guna2DataGridView1);
+            guna2GradientPanel2.Controls.Add(dgvReserva);
             guna2GradientPanel2.CustomizableEdges = customizableEdges1;
             guna2GradientPanel2.Location = new Point(12, 465);
             guna2GradientPanel2.Name = "guna2GradientPanel2";
@@ -122,10 +122,10 @@
             guna2HtmlLabel18.TabIndex = 24;
             guna2HtmlLabel18.Text = "Listado de Reserva \r\n";
             // 
-            // guna2DataGridView1
+            // dgvReserva
             // 
             dataGridViewCellStyle1.BackColor = Color.White;
-            guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dgvReserva.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
@@ -133,9 +133,9 @@
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            guna2DataGridView1.ColumnHeadersHeight = 4;
-            guna2DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgvReserva.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dgvReserva.ColumnHeadersHeight = 4;
+            dgvReserva.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
@@ -143,34 +143,35 @@
             dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            guna2DataGridView1.GridColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.Location = new Point(13, 41);
-            guna2DataGridView1.Name = "guna2DataGridView1";
-            guna2DataGridView1.RowHeadersVisible = false;
-            guna2DataGridView1.Size = new Size(946, 183);
-            guna2DataGridView1.TabIndex = 0;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 4;
-            guna2DataGridView1.ThemeStyle.ReadOnly = false;
-            guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            guna2DataGridView1.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
-            guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            guna2DataGridView1.ThemeStyle.RowsStyle.Height = 25;
-            guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dgvReserva.DefaultCellStyle = dataGridViewCellStyle3;
+            dgvReserva.GridColor = Color.FromArgb(231, 229, 255);
+            dgvReserva.Location = new Point(13, 41);
+            dgvReserva.Name = "dgvReserva";
+            dgvReserva.RowHeadersVisible = false;
+            dgvReserva.Size = new Size(946, 183);
+            dgvReserva.TabIndex = 0;
+            dgvReserva.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            dgvReserva.ThemeStyle.AlternatingRowsStyle.Font = null;
+            dgvReserva.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            dgvReserva.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            dgvReserva.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            dgvReserva.ThemeStyle.BackColor = Color.White;
+            dgvReserva.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            dgvReserva.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            dgvReserva.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvReserva.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
+            dgvReserva.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            dgvReserva.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgvReserva.ThemeStyle.HeaderStyle.Height = 4;
+            dgvReserva.ThemeStyle.ReadOnly = false;
+            dgvReserva.ThemeStyle.RowsStyle.BackColor = Color.White;
+            dgvReserva.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvReserva.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
+            dgvReserva.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            dgvReserva.ThemeStyle.RowsStyle.Height = 25;
+            dgvReserva.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dgvReserva.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dgvReserva.CellClick += dgvReserva_CellClick;
             // 
             // cmbDocente
             // 
@@ -326,6 +327,35 @@
             guna2GradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges26;
             guna2GradientPanel1.Size = new Size(978, 377);
             guna2GradientPanel1.TabIndex = 2;
+            // 
+            // guna2HtmlLabel19
+            // 
+            guna2HtmlLabel19.BackColor = Color.Transparent;
+            guna2HtmlLabel19.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel19.Location = new Point(486, 234);
+            guna2HtmlLabel19.Name = "guna2HtmlLabel19";
+            guna2HtmlLabel19.Size = new Size(95, 19);
+            guna2HtmlLabel19.TabIndex = 35;
+            guna2HtmlLabel19.Text = "Estado Reserva";
+            // 
+            // cmbEstadoReserva
+            // 
+            cmbEstadoReserva.BackColor = Color.Transparent;
+            cmbEstadoReserva.BorderRadius = 10;
+            cmbEstadoReserva.CustomizableEdges = customizableEdges17;
+            cmbEstadoReserva.DrawMode = DrawMode.OwnerDrawFixed;
+            cmbEstadoReserva.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbEstadoReserva.FocusedColor = Color.FromArgb(94, 148, 255);
+            cmbEstadoReserva.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cmbEstadoReserva.Font = new Font("Segoe UI", 10F);
+            cmbEstadoReserva.ForeColor = Color.FromArgb(68, 88, 112);
+            cmbEstadoReserva.ItemHeight = 30;
+            cmbEstadoReserva.Items.AddRange(new object[] { "Activa", "Cancelada", "Finalizada" });
+            cmbEstadoReserva.Location = new Point(486, 259);
+            cmbEstadoReserva.Name = "cmbEstadoReserva";
+            cmbEstadoReserva.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            cmbEstadoReserva.Size = new Size(458, 36);
+            cmbEstadoReserva.TabIndex = 34;
             // 
             // btnEliminar
             // 
@@ -586,34 +616,6 @@
             guna2Panel1.Size = new Size(1020, 63);
             guna2Panel1.TabIndex = 7;
             // 
-            // cmbEstadoReserva
-            // 
-            cmbEstadoReserva.BackColor = Color.Transparent;
-            cmbEstadoReserva.BorderRadius = 10;
-            cmbEstadoReserva.CustomizableEdges = customizableEdges17;
-            cmbEstadoReserva.DrawMode = DrawMode.OwnerDrawFixed;
-            cmbEstadoReserva.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbEstadoReserva.FocusedColor = Color.FromArgb(94, 148, 255);
-            cmbEstadoReserva.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            cmbEstadoReserva.Font = new Font("Segoe UI", 10F);
-            cmbEstadoReserva.ForeColor = Color.FromArgb(68, 88, 112);
-            cmbEstadoReserva.ItemHeight = 30;
-            cmbEstadoReserva.Location = new Point(486, 259);
-            cmbEstadoReserva.Name = "cmbEstadoReserva";
-            cmbEstadoReserva.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            cmbEstadoReserva.Size = new Size(458, 36);
-            cmbEstadoReserva.TabIndex = 34;
-            // 
-            // guna2HtmlLabel19
-            // 
-            guna2HtmlLabel19.BackColor = Color.Transparent;
-            guna2HtmlLabel19.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel19.Location = new Point(486, 234);
-            guna2HtmlLabel19.Name = "guna2HtmlLabel19";
-            guna2HtmlLabel19.Size = new Size(95, 19);
-            guna2HtmlLabel19.TabIndex = 35;
-            guna2HtmlLabel19.Text = "Estado Reserva";
-            // 
             // FrmReservas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -626,7 +628,7 @@
             Text = "FrmReservas";
             guna2GradientPanel2.ResumeLayout(false);
             guna2GradientPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvReserva).EndInit();
             ((System.ComponentModel.ISupportInitialize)nruCantidadEstudiantes).EndInit();
             guna2GradientPanel1.ResumeLayout(false);
             guna2GradientPanel1.PerformLayout();
@@ -637,7 +639,7 @@
 
         #endregion
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
-        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvReserva;
         private Guna.UI2.WinForms.Guna2ComboBox cmbDocente;
         private Guna.UI2.WinForms.Guna2ComboBox cmbLab;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpDiaReserva;

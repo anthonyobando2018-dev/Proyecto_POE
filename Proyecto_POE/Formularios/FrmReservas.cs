@@ -80,6 +80,11 @@ namespace CapaPresentacion.Formularios
             }
         }
 
+        private void dgvReserva_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
         private void DesactivarControles()
         {
             cmbDocente.Enabled = false;
@@ -91,21 +96,21 @@ namespace CapaPresentacion.Formularios
             cmbHoraFin.Enabled = false;
             btnRegistrar.Enabled = false;
             btnNuevo.Enabled = false;
-            chkbEstadoReserva.Enabled = false;
+            cmbEstadoReserva.Enabled = false;
         }
 
         private void ActivarControles()
         {
-            cbDocente.Enabled = true;
-            cbLaboratorio.Enabled = true;
+            cmbDocente.Enabled = true;
+            cmbLab.Enabled = true;
             rtbMotivoReserva.Enabled = true;
-            nudCantidadEstudiantes.Enabled = true;
+            nruCantidadEstudiantes.Enabled = true;
             dtpDiaReserva.Enabled = true;
-            cbHoraInicio.Enabled = true;
-            cbHoraFin.Enabled = true;
-            btnGuardar.Enabled = true;
-            btnLimpiar.Enabled = true;
-            chkbEstadoReserva.Enabled = true;
+            cmbHoraInicio.Enabled = true;
+            cmbHoraFin.Enabled = true;
+            btnRegistrar.Enabled = true;
+            btnNuevo.Enabled = true;
+            cmbEstadoReserva.Enabled = true;
         }
 
         private void ErrorPersonalizado(Exception ex)
@@ -127,10 +132,22 @@ namespace CapaPresentacion.Formularios
             cmbHoraInicio.SelectedIndex = -1;
             cmbHoraFin.SelectedIndex = -1;
             rtbMotivoReserva.Text = string.Empty;
-            tbId.Text = ReservaAdministradora.GetIdActual().ToString();
             dtpDiaReserva.Value = DateTime.Today;
             nruCantidadEstudiantes.Value = 0;
             btnRegistrar.Text = "Guardar";
+        }
+
+        private void RefrescarTablaReservas()
+        {
+            try
+            {
+                dgvReserva.DataSource = null;
+                dgvReserva.DataSource = obj_cln_est.GetListadoEstudiantes();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

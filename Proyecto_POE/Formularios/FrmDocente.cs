@@ -139,8 +139,44 @@ namespace CapaPresentacion.Formularios
             }
         }
 
+
+        private void dgvDocente_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.RowIndex < 0 || e.RowIndex >= dgvDocente.Rows.Count)
+                    return;
+                DataGridViewRow fila = dgvDocente.Rows[e.RowIndex];
+
+                //txtCodigo.Text = fila.Cells["id_estudiante"].Value?.ToString() ?? "";
+                txtCedula.Text = fila.Cells["cedula"].Value?.ToString() ?? "";
+                txtNombres.Text = fila.Cells["nombres"].Value?.ToString() ?? "";
+                txtApellidos.Text = fila.Cells["apellidos"].Value?.ToString() ?? "";
+                txtEspecialidad.Text = fila.Cells["especialidad"].Value?.ToString() ?? "";
+                // Manejo de género
+                string estado = fila.Cells["genero"].Value?.ToString();
+                if (estado == "Activo")
+                    cmbEstado.SelectedIndex = 0; // Activo
+                else if (estado == "Inactivo")
+                    cmbEstado.SelectedIndex = 1; //Inactivo
+                else
+                    cmbEstado.SelectedIndex = -1;
+
+                is_nuevo = false;
+
+                btnRegistrar.Enabled = false;
+                btnEliminar.Enabled = true;
+                btnNuevo.Enabled = true;
+                btnActualizar.Enabled = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error -> " + ex.Message);
+            }
+        }
+
         private void LimpiarControles()
-        {   
+        {
             txtCedula.Text = string.Empty;
             txtNombres.Text = string.Empty;
             txtApellidos.Text = string.Empty;
@@ -149,5 +185,17 @@ namespace CapaPresentacion.Formularios
 
         }
 
+        private void CargarEstudiantesGrid()
+        {
+            try
+            {
+                dgvDocente.DataSource = null;
+                dgvDocente.DataSource = obj_cln_est.GetListadoEstudiantes();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

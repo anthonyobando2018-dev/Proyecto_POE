@@ -54,7 +54,7 @@
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            btnLimpiar = new Guna.UI2.WinForms.Guna2Button();
             btnBuscar = new Guna.UI2.WinForms.Guna2Button();
             guna2DateTimePicker2 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -62,7 +62,7 @@
             guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
+            dgvConsultas = new Guna.UI2.WinForms.Guna2DataGridView();
             guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -70,7 +70,7 @@
             guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2Panel1.SuspendLayout();
             guna2Panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvConsultas).BeginInit();
             guna2Panel3.SuspendLayout();
             SuspendLayout();
             // 
@@ -82,7 +82,7 @@
             guna2Panel1.Controls.Add(guna2HtmlLabel2);
             guna2Panel1.Controls.Add(guna2HtmlLabel1);
             guna2Panel1.Controls.Add(guna2HtmlLabel12);
-            guna2Panel1.Controls.Add(guna2Button2);
+            guna2Panel1.Controls.Add(btnLimpiar);
             guna2Panel1.Controls.Add(btnBuscar);
             guna2Panel1.Controls.Add(guna2DateTimePicker2);
             guna2Panel1.Controls.Add(guna2DateTimePicker1);
@@ -136,28 +136,29 @@
             guna2HtmlLabel12.TabIndex = 18;
             guna2HtmlLabel12.Text = "Laboratorio";
             // 
-            // guna2Button2
+            // btnLimpiar
             // 
-            guna2Button2.BorderRadius = 10;
-            guna2Button2.CustomizableEdges = customizableEdges1;
-            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button2.FillColor = Color.FromArgb(21, 93, 252);
-            guna2Button2.FocusedColor = SystemColors.Control;
-            guna2Button2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
-            guna2Button2.ForeColor = Color.White;
-            guna2Button2.Image = Properties.Resources.limpiar;
-            guna2Button2.ImageAlign = HorizontalAlignment.Left;
-            guna2Button2.ImageSize = new Size(16, 16);
-            guna2Button2.Location = new Point(132, 145);
-            guna2Button2.Name = "guna2Button2";
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button2.Size = new Size(134, 37);
-            guna2Button2.TabIndex = 10;
-            guna2Button2.Text = "Limpiar Filtros ";
-            guna2Button2.TextAlign = HorizontalAlignment.Left;
+            btnLimpiar.BorderRadius = 10;
+            btnLimpiar.CustomizableEdges = customizableEdges1;
+            btnLimpiar.DisabledState.BorderColor = Color.DarkGray;
+            btnLimpiar.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnLimpiar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnLimpiar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnLimpiar.FillColor = Color.FromArgb(21, 93, 252);
+            btnLimpiar.FocusedColor = SystemColors.Control;
+            btnLimpiar.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
+            btnLimpiar.ForeColor = Color.White;
+            btnLimpiar.Image = Properties.Resources.limpiar;
+            btnLimpiar.ImageAlign = HorizontalAlignment.Left;
+            btnLimpiar.ImageSize = new Size(16, 16);
+            btnLimpiar.Location = new Point(132, 145);
+            btnLimpiar.Name = "btnLimpiar";
+            btnLimpiar.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnLimpiar.Size = new Size(134, 37);
+            btnLimpiar.TabIndex = 10;
+            btnLimpiar.Text = "Limpiar Filtros ";
+            btnLimpiar.TextAlign = HorizontalAlignment.Left;
+            btnLimpiar.Click += btnLimpiar_Click;
             // 
             // btnBuscar
             // 
@@ -180,6 +181,7 @@
             btnBuscar.TabIndex = 9;
             btnBuscar.Text = "Buscar";
             btnBuscar.TextAlign = HorizontalAlignment.Right;
+            btnBuscar.Click += btnBuscar_Click;
             // 
             // guna2DateTimePicker2
             // 
@@ -265,7 +267,7 @@
             // guna2Panel2
             // 
             guna2Panel2.BackColor = SystemColors.Control;
-            guna2Panel2.Controls.Add(guna2DataGridView1);
+            guna2Panel2.Controls.Add(dgvConsultas);
             guna2Panel2.Controls.Add(guna2HtmlLabel8);
             guna2Panel2.CustomizableEdges = customizableEdges15;
             guna2Panel2.Location = new Point(28, 306);
@@ -274,10 +276,10 @@
             guna2Panel2.Size = new Size(946, 383);
             guna2Panel2.TabIndex = 4;
             // 
-            // guna2DataGridView1
+            // dgvConsultas
             // 
             dataGridViewCellStyle1.BackColor = Color.White;
-            guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dgvConsultas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
@@ -285,9 +287,9 @@
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            guna2DataGridView1.ColumnHeadersHeight = 4;
-            guna2DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgvConsultas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dgvConsultas.ColumnHeadersHeight = 4;
+            dgvConsultas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
@@ -295,34 +297,34 @@
             dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            guna2DataGridView1.GridColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.Location = new Point(14, 64);
-            guna2DataGridView1.Name = "guna2DataGridView1";
-            guna2DataGridView1.RowHeadersVisible = false;
-            guna2DataGridView1.Size = new Size(890, 299);
-            guna2DataGridView1.TabIndex = 2;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 4;
-            guna2DataGridView1.ThemeStyle.ReadOnly = false;
-            guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            guna2DataGridView1.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
-            guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            guna2DataGridView1.ThemeStyle.RowsStyle.Height = 25;
-            guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dgvConsultas.DefaultCellStyle = dataGridViewCellStyle3;
+            dgvConsultas.GridColor = Color.FromArgb(231, 229, 255);
+            dgvConsultas.Location = new Point(14, 64);
+            dgvConsultas.Name = "dgvConsultas";
+            dgvConsultas.RowHeadersVisible = false;
+            dgvConsultas.Size = new Size(890, 299);
+            dgvConsultas.TabIndex = 2;
+            dgvConsultas.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            dgvConsultas.ThemeStyle.AlternatingRowsStyle.Font = null;
+            dgvConsultas.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            dgvConsultas.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            dgvConsultas.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            dgvConsultas.ThemeStyle.BackColor = Color.White;
+            dgvConsultas.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            dgvConsultas.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            dgvConsultas.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvConsultas.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
+            dgvConsultas.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            dgvConsultas.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgvConsultas.ThemeStyle.HeaderStyle.Height = 4;
+            dgvConsultas.ThemeStyle.ReadOnly = false;
+            dgvConsultas.ThemeStyle.RowsStyle.BackColor = Color.White;
+            dgvConsultas.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvConsultas.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
+            dgvConsultas.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            dgvConsultas.ThemeStyle.RowsStyle.Height = 25;
+            dgvConsultas.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dgvConsultas.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
             // guna2HtmlLabel8
             // 
@@ -391,7 +393,7 @@
             guna2Panel1.PerformLayout();
             guna2Panel2.ResumeLayout(false);
             guna2Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvConsultas).EndInit();
             guna2Panel3.ResumeLayout(false);
             guna2Panel3.PerformLayout();
             ResumeLayout(false);
@@ -405,9 +407,9 @@
         private Guna.UI2.WinForms.Guna2ComboBox cmbEstado;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button btnLimpiar;
         private Guna.UI2.WinForms.Guna2Button btnBuscar;
-        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvConsultas;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;

@@ -53,8 +53,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             txtNombreLab = new Guna.UI2.WinForms.Guna2TextBox();
-            nrCapacidad = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            cmbLab = new Guna.UI2.WinForms.Guna2ComboBox();
+            numCapacidad = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            cmbEstadoLab = new Guna.UI2.WinForms.Guna2ComboBox();
             guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             btnEliminar = new Guna.UI2.WinForms.Guna2Button();
             btnActualizar = new Guna.UI2.WinForms.Guna2Button();
@@ -69,7 +69,7 @@
             guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            ((System.ComponentModel.ISupportInitialize)nrCapacidad).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numCapacidad).BeginInit();
             guna2GradientPanel1.SuspendLayout();
             guna2GradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvLab).BeginInit();
@@ -106,36 +106,36 @@
             txtNombreLab.Size = new Size(298, 36);
             txtNombreLab.TabIndex = 6;
             // 
-            // nrCapacidad
+            // numCapacidad
             // 
-            nrCapacidad.BackColor = Color.Transparent;
-            nrCapacidad.BorderRadius = 10;
-            nrCapacidad.CustomizableEdges = customizableEdges3;
-            nrCapacidad.Font = new Font("Segoe UI", 9F);
-            nrCapacidad.Location = new Point(327, 73);
-            nrCapacidad.Name = "nrCapacidad";
-            nrCapacidad.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            nrCapacidad.Size = new Size(312, 36);
-            nrCapacidad.TabIndex = 8;
+            numCapacidad.BackColor = Color.Transparent;
+            numCapacidad.BorderRadius = 10;
+            numCapacidad.CustomizableEdges = customizableEdges3;
+            numCapacidad.Font = new Font("Segoe UI", 9F);
+            numCapacidad.Location = new Point(327, 73);
+            numCapacidad.Name = "numCapacidad";
+            numCapacidad.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            numCapacidad.Size = new Size(312, 36);
+            numCapacidad.TabIndex = 8;
             // 
-            // cmbLab
+            // cmbEstadoLab
             // 
-            cmbLab.BackColor = Color.Transparent;
-            cmbLab.BorderRadius = 10;
-            cmbLab.CustomizableEdges = customizableEdges5;
-            cmbLab.DrawMode = DrawMode.OwnerDrawFixed;
-            cmbLab.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbLab.FocusedColor = Color.FromArgb(94, 148, 255);
-            cmbLab.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            cmbLab.Font = new Font("Segoe UI", 10F);
-            cmbLab.ForeColor = Color.FromArgb(68, 88, 112);
-            cmbLab.ItemHeight = 30;
-            cmbLab.Items.AddRange(new object[] { "Activo", "Inactivo" });
-            cmbLab.Location = new Point(660, 73);
-            cmbLab.Name = "cmbLab";
-            cmbLab.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            cmbLab.Size = new Size(305, 36);
-            cmbLab.TabIndex = 10;
+            cmbEstadoLab.BackColor = Color.Transparent;
+            cmbEstadoLab.BorderRadius = 10;
+            cmbEstadoLab.CustomizableEdges = customizableEdges5;
+            cmbEstadoLab.DrawMode = DrawMode.OwnerDrawFixed;
+            cmbEstadoLab.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbEstadoLab.FocusedColor = Color.FromArgb(94, 148, 255);
+            cmbEstadoLab.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cmbEstadoLab.Font = new Font("Segoe UI", 10F);
+            cmbEstadoLab.ForeColor = Color.FromArgb(68, 88, 112);
+            cmbEstadoLab.ItemHeight = 30;
+            cmbEstadoLab.Items.AddRange(new object[] { "Activo", "Inactivo" });
+            cmbEstadoLab.Location = new Point(660, 73);
+            cmbEstadoLab.Name = "cmbEstadoLab";
+            cmbEstadoLab.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            cmbEstadoLab.Size = new Size(305, 36);
+            cmbEstadoLab.TabIndex = 10;
             // 
             // guna2GradientPanel1
             // 
@@ -149,8 +149,8 @@
             guna2GradientPanel1.Controls.Add(guna2HtmlLabel10);
             guna2GradientPanel1.Controls.Add(guna2HtmlLabel13);
             guna2GradientPanel1.Controls.Add(btnGuardar);
-            guna2GradientPanel1.Controls.Add(cmbLab);
-            guna2GradientPanel1.Controls.Add(nrCapacidad);
+            guna2GradientPanel1.Controls.Add(cmbEstadoLab);
+            guna2GradientPanel1.Controls.Add(numCapacidad);
             guna2GradientPanel1.Controls.Add(txtNombreLab);
             guna2GradientPanel1.CustomizableEdges = customizableEdges15;
             guna2GradientPanel1.Location = new Point(12, 83);
@@ -180,6 +180,7 @@
             btnEliminar.TabIndex = 33;
             btnEliminar.Text = "Eliminar";
             btnEliminar.TextAlign = HorizontalAlignment.Left;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // btnActualizar
             // 
@@ -202,6 +203,7 @@
             btnActualizar.TabIndex = 32;
             btnActualizar.Text = "Actualizar";
             btnActualizar.TextAlign = HorizontalAlignment.Left;
+            btnActualizar.Click += btnActualizar_Click;
             // 
             // btnNuevo
             // 
@@ -224,6 +226,7 @@
             btnNuevo.TabIndex = 31;
             btnNuevo.Text = "Nuevo";
             btnNuevo.TextAlign = HorizontalAlignment.Left;
+            btnNuevo.Click += btnNuevo_Click;
             // 
             // guna2HtmlLabel8
             // 
@@ -286,6 +289,7 @@
             btnGuardar.TabIndex = 11;
             btnGuardar.Text = "Guardar";
             btnGuardar.TextAlign = HorizontalAlignment.Left;
+            btnGuardar.Click += btnGuardar_Click;
             // 
             // guna2GradientPanel2
             // 
@@ -348,6 +352,7 @@
             dgvLab.ThemeStyle.RowsStyle.Height = 25;
             dgvLab.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dgvLab.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dgvLab.CellClick += dgvLab_CellClick;
             // 
             // guna2HtmlLabel7
             // 
@@ -391,7 +396,7 @@
             Controls.Add(guna2GradientPanel2);
             Name = "FrmLaboratorio";
             Text = "FrmLaboratorio";
-            ((System.ComponentModel.ISupportInitialize)nrCapacidad).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numCapacidad).EndInit();
             guna2GradientPanel1.ResumeLayout(false);
             guna2GradientPanel1.PerformLayout();
             guna2GradientPanel2.ResumeLayout(false);
@@ -406,8 +411,8 @@
 
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2TextBox txtNombreLab;
-        private Guna.UI2.WinForms.Guna2NumericUpDown nrCapacidad;
-        private Guna.UI2.WinForms.Guna2ComboBox cmbLab;
+        private Guna.UI2.WinForms.Guna2NumericUpDown numCapacidad;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbEstadoLab;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
