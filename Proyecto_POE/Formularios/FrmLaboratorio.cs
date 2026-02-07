@@ -1,4 +1,5 @@
-﻿using CapaNegocio.Entidades;
+﻿using CapaAplicacion.Servicios;
+using CapaNegocio.Entidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,11 +15,14 @@ namespace CapaPresentacion.Formularios
 {
     public partial class FrmLaboratorio : Form
     {
-        public FrmLaboratorio()
+        private readonly LaboratorioServicio _laboratorioServicio;
+
+        public FrmLaboratorio(LaboratorioServicio laboratorioServicio)
         {
             InitializeComponent();
             btnEliminar.Enabled = false;
             btnActualizar.Enabled = false;
+            _laboratorioServicio = laboratorioServicio;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)

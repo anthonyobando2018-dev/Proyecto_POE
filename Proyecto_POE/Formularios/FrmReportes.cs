@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaAplicacion.Servicios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,12 @@ namespace CapaPresentacion.Formularios
 {
     public partial class FrmReportes : Form
     {
-        public FrmReportes()
+        private readonly ReporteServicio _reporteServicio;
+
+        public FrmReportes(ReporteServicio reporteServicio)
         {
             InitializeComponent();
+            _reporteServicio = reporteServicio;
         }
 
         private void btnGenerarReporte_Click(object sender, EventArgs e)

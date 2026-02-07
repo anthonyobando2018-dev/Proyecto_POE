@@ -1,4 +1,5 @@
-﻿using CapaNegocio.Entidades;
+﻿using CapaAplicacion.Servicios;
+using CapaNegocio.Entidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,11 +14,14 @@ namespace CapaPresentacion.Formularios
 {
     public partial class FrmReservas : Form
     {
-        public FrmReservas()
+        private readonly ReservaServicio _reservaServicio;
+
+        public FrmReservas(ReservaServicio reservaServicio)
         {
             InitializeComponent();
             btnActualizar.Enabled = false;
             btnEliminar.Enabled = false;
+            _reservaServicio = reservaServicio;
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)

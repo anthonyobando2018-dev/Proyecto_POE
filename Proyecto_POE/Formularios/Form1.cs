@@ -1,3 +1,4 @@
+using CapaAplicacion.Servicios;
 using CapaPresentacion.Formularios;
 using System.Security.Cryptography;
 
@@ -5,11 +6,25 @@ namespace Proyecto_POE
 {
     public partial class Form1 : Form
     {
+        private readonly DocenteServicio _docenteServicio;
+        private readonly LaboratorioServicio _laboratorioServicio;
+        private readonly ReservaServicio _reservaServicio;
+        private readonly ReservaFiltrosServicio _reservaFiltroServicio;
+        private readonly ReporteServicio _reporteServicio;
 
-
-        public Form1()
+        public Form1(
+            DocenteServicio docenteServicio, 
+            LaboratorioServicio laboratorioServicio,
+            ReservaServicio reservaServicio, 
+            ReservaFiltrosServicio reservaFiltroServicio,
+            ReporteServicio reporteServicio)
         {
             InitializeComponent();
+            _docenteServicio = docenteServicio;
+            _laboratorioServicio = laboratorioServicio;
+            _reservaServicio = reservaServicio;
+            _reservaFiltroServicio = reservaFiltroServicio;
+            _reporteServicio = reporteServicio;
         }
 
         private void btnPrincipal_Click(object sender, EventArgs e)
@@ -38,7 +53,7 @@ namespace Proyecto_POE
         {
             ResetearBotones();
             ActivarBoton(btnLaboratorio);
-            FrmLaboratorio frm = new FrmLaboratorio();
+            FrmLaboratorio frm = new FrmLaboratorio(_laboratorioServicio);
             AbrirFormEnPanel(frm);
         }
 
@@ -46,7 +61,7 @@ namespace Proyecto_POE
         {
             ResetearBotones();
             ActivarBoton(btnDocentes);
-            FrmDocente frm = new FrmDocente();
+            FrmDocente frm = new FrmDocente(_docenteServicio);
             AbrirFormEnPanel(frm);
         }
 
@@ -54,7 +69,7 @@ namespace Proyecto_POE
         {
             ResetearBotones();
             ActivarBoton(btnReservas);
-            FrmReservas frm = new FrmReservas();
+            FrmReservas frm = new FrmReservas(_reservaServicio);
             AbrirFormEnPanel(frm);
         }
 
@@ -70,7 +85,7 @@ namespace Proyecto_POE
         {
             ResetearBotones();
             ActivarBoton(btnReportes);
-            FrmReportes frm = new FrmReportes();
+            FrmReportes frm = new FrmReportes(_reporteServicio);
             AbrirFormEnPanel(frm);
         }
 

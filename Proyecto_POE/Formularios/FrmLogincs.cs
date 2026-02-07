@@ -20,9 +20,7 @@ namespace CapaPresentacion.Formularios
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Form1 fr = new Form1();
             this.Hide(); // Oculta el formulario actual
-            fr.Show();
         }
     }
 }
