@@ -63,6 +63,16 @@ namespace CapaPresentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap avaUsuario {
+            get {
+                object obj = ResourceManager.GetObject("avaUsuario", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap buscar {
             get {
                 object obj = ResourceManager.GetObject("buscar", resourceCulture);
@@ -86,6 +96,36 @@ namespace CapaPresentacion.Properties {
         internal static System.Drawing.Bitmap consulta {
             get {
                 object obj = ResourceManager.GetObject("consulta", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap contrasena__1_ {
+            get {
+                object obj = ResourceManager.GetObject("contrasena (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap contrasena__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("contrasena (1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap contrasena__2_ {
+            get {
+                object obj = ResourceManager.GetObject("contrasena (2)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

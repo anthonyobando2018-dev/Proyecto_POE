@@ -133,6 +133,7 @@
             // guna2GradientPanel1
             // 
             guna2GradientPanel1.BackColor = Color.White;
+            guna2GradientPanel1.BorderRadius = 10;
             guna2GradientPanel1.Controls.Add(guna2HtmlLabel8);
             guna2GradientPanel1.Controls.Add(guna2HtmlLabel3);
             guna2GradientPanel1.Controls.Add(guna2HtmlLabel10);
