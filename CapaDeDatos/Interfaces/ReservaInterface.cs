@@ -135,12 +135,11 @@ namespace CapaDeDatos.Interfaces
         }
 
         // filtros
-        public List<Reserva> FiltrarPorRangoDeFecha(DateOnly fechaMin, DateOnly fechaMax, int estado_reserva = 1)
+        public List<Reserva> FiltrarPorRangoDeFecha(DateOnly fechaMin, DateOnly fechaMax)
         {
             var resultado = _dbQueryManager.EjecutaSP_Query("sp_listar_reservas_rango_fecha", new List<Parametro>() {
                 new Parametro("@p_fecha_minima", SqlDbType.Date, fechaMin),
-                new Parametro("@p_fecha_maxima", SqlDbType.Date, fechaMax),
-                new Parametro("@p_estado", SqlDbType.Int, estado_reserva),
+                new Parametro("@p_fecha_maxima", SqlDbType.Date, fechaMax)
             });
 
             List<Reserva> reservas = new List<Reserva>();

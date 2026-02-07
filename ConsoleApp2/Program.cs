@@ -10,7 +10,7 @@ namespace ConsoleApp2
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, World!");
-            string connst = @"Data Source=EMILIA-TOSCANO\SQLEXPRESS2025;Persist Security Info=False;User ID=sa;Password=genshin123;Pooling=False;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=True;Application Name=""SQL Server Management Studio"";Command Timeout=0";
+            string connst = @"AQUI VA TU CADENA DE CONEXION";
             DBConnection dbconn = new DBConnection(connst);
             SQLManagement sqlMan = new SQLManagement(dbconn);
 
@@ -23,10 +23,15 @@ namespace ConsoleApp2
             ReservaInterface resInt = new ReservaInterface(sqlMan);
             ReservaServicio resSer = new ReservaServicio(resInt, labInt);
 
+            ReservaFiltrosServicio resFiltros = new ReservaFiltrosServicio(resInt);
+            ReporteServicio repo = new ReporteServicio(resFiltros, labSer, docSer);
+
             try
             {
                 //EjecutarPruebaDocente(docSer);
                 EjecutarPruebaReserva(resSer);
+
+                Console.WriteLine(repo.GenerarReporte(new DateOnly(2026, 2, 7), new DateOnly(2026, 2, 8)));
             }
             catch (Exception ex)
             {
@@ -76,14 +81,14 @@ namespace ConsoleApp2
 
             // resSer.ActualizarDatos(2, 2, 2, "POR QUIERO NMMS", 40, new DateOnly(2026, 2, 8), new TimeOnly(10, 0), new TimeOnly(11, 0), 1);
 
-            //resSer.Cancelar(1);
-            //resSer.Finalizar(2);
+            // resSer.Cancelar(3);
+            // resSer.Finalizar(4);
 
 
-
+            /*
             var docs = resSer.ListarTodas();
-            docs = resSer.FiltrarPorRangoDeFecha(new DateOnly(2026, 2, 7), new DateOnly(2026, 2, 8));
-            docs.ForEach(doc => Console.WriteLine(doc));
+            // docs = resSer.FiltrarPorRangoDeFecha(new DateOnly(2026, 2, 7), new DateOnly(2026, 2, 8));
+            docs.ForEach(doc => Console.WriteLine(doc));*/
 
         }
     }

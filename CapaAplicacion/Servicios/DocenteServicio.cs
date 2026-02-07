@@ -42,6 +42,11 @@ namespace CapaAplicacion.Servicios
             return _docenteInterface.ObtenerTodos();
         }
 
+        public Docente BuscarPorId(int idDocente)
+        {
+            return _docenteInterface.ObtenerPorId(idDocente) ?? throw new ApplicationException("Docente no encontrado con ese id.");
+        }
+
         public bool Inactivar(int idDocente)
         {
             return _docenteInterface.ActualizarEstado(idDocente, 0);

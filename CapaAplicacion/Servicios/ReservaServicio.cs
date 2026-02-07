@@ -54,7 +54,7 @@ namespace CapaAplicacion.Servicios
         /* Actualiza a estado cancelado (solo reservas activas) */
         public void Cancelar(int idReserva)
         {
-            FiltrarPorParametros(estado: 1);
+            _reservaInterface.FiltrarPorParametros(estado_reserva: 1);
             if (!_reservaInterface.ActualizarEstado(idReserva, estado: 2))
                 throw new ApplicationException("La reserva no se puede cancelar porque: no existe, esta cancelada o finalizada actualmente.");
         }
@@ -62,27 +62,9 @@ namespace CapaAplicacion.Servicios
         /* Actualiza a estado finalizado (solo reservas activas) */
         public void Finalizar(int idReserva)
         {
-            FiltrarPorParametros(estado: 1);
+            _reservaInterface.FiltrarPorParametros(estado_reserva: 1);
             if (!_reservaInterface.ActualizarEstado(idReserva, estado: 3))
                 throw new ApplicationException("La reserva no se puede finalizar porque: no existe, esta cancelada o finalizada actualmente.");
-        }
-
-        /* Filtra las reservas dentro de un rango de fecha */
-        public List<Reserva> FiltrarPorRangoDeFecha(DateOnly fechaMin, DateOnly fechaMax, int estado = 1)
-        {
-            ValidarRangoValidoDeFecha(fechaMin, fechaMax);
-            return _reservaInterface.FiltrarPorRangoDeFecha(fechaMin, fechaMax, estado);
-        }
-
-        public List<Reserva> FiltrarPorParametros(int? idDocente = null, int? idLaboratorio = null, DateOnly? fechaReserva = null, int? estado = null)
-        {
-            return _reservaInterface.FiltrarPorParametros(idDocente: idDocente, idLaboratorio: idLaboratorio, fechaEspecifica: fechaReserva, estado_reserva: estado);
-        }
-
-        private void ValidarRangoValidoDeFecha(DateOnly fechaMin, DateOnly fechaMax)
-        {
-            if (fechaMin > fechaMax)
-                throw new ApplicationException("La fecha minima no puede ser menor que la fecha maxima.");
         }
     }
 }
