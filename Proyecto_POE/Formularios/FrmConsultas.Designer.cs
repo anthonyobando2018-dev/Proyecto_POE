@@ -144,9 +144,10 @@
             guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button2.FillColor = Color.White;
-            guna2Button2.Font = new Font("Segoe UI", 9F);
-            guna2Button2.ForeColor = Color.Black;
+            guna2Button2.FillColor = Color.FromArgb(21, 93, 252);
+            guna2Button2.FocusedColor = SystemColors.Control;
+            guna2Button2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
+            guna2Button2.ForeColor = Color.White;
             guna2Button2.Image = Properties.Resources.limpiar;
             guna2Button2.ImageAlign = HorizontalAlignment.Left;
             guna2Button2.ImageSize = new Size(16, 16);
@@ -156,7 +157,7 @@
             guna2Button2.Size = new Size(134, 37);
             guna2Button2.TabIndex = 10;
             guna2Button2.Text = "Limpiar Filtros ";
-            guna2Button2.TextAlign = HorizontalAlignment.Right;
+            guna2Button2.TextAlign = HorizontalAlignment.Left;
             // 
             // btnBuscar
             // 
@@ -166,7 +167,8 @@
             btnBuscar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnBuscar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnBuscar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnBuscar.Font = new Font("Segoe UI", 9F);
+            btnBuscar.FillColor = Color.FromArgb(21, 93, 252);
+            btnBuscar.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
             btnBuscar.ForeColor = Color.White;
             btnBuscar.Image = Properties.Resources.buscar;
             btnBuscar.ImageAlign = HorizontalAlignment.Left;
@@ -373,6 +375,7 @@
             guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             guna2HtmlLabel5.Size = new Size(3, 2);
             guna2HtmlLabel5.TabIndex = 1;
+            guna2HtmlLabel5.Text = null;
             // 
             // FrmConsultas
             // 

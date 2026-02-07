@@ -153,7 +153,8 @@
             btnLogin.DisabledState.CustomBorderColor = Color.DarkGray;
             btnLogin.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnLogin.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnLogin.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLogin.FillColor = Color.FromArgb(21, 93, 252);
+            btnLogin.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
             btnLogin.ForeColor = Color.White;
             btnLogin.Location = new Point(29, 334);
             btnLogin.Name = "btnLogin";
