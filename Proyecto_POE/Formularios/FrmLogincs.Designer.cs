@@ -162,6 +162,7 @@
             btnLogin.Size = new Size(339, 50);
             btnLogin.TabIndex = 25;
             btnLogin.Text = "Iniciar Sesión";
+            btnLogin.Click += btnLogin_Click;
             // 
             // FrmLogincs
             // 

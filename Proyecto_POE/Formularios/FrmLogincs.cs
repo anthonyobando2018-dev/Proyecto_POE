@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proyecto_POE;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,13 @@ namespace CapaPresentacion.Formularios
         public FrmLogincs()
         {
             InitializeComponent();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            Form1 fr = new Form1();
+            this.Hide(); // Oculta el formulario actual
+            fr.Show();
         }
     }
 }

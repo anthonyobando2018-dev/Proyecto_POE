@@ -47,15 +47,15 @@
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            btnLimpiar = new Guna.UI2.WinForms.Guna2Button();
+            btnGenerarReporte = new Guna.UI2.WinForms.Guna2Button();
             guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2DateTimePicker2 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             rtbReserva = new RichTextBox();
+            guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2Panel3.SuspendLayout();
             guna2Panel1.SuspendLayout();
             guna2Panel2.SuspendLayout();
@@ -109,7 +109,7 @@
             guna2Panel1.BackColor = Color.White;
             guna2Panel1.Controls.Add(guna2HtmlLabel4);
             guna2Panel1.Controls.Add(guna2HtmlLabel1);
-            guna2Panel1.Controls.Add(btnLimpiar);
+            guna2Panel1.Controls.Add(btnGenerarReporte);
             guna2Panel1.Controls.Add(guna2HtmlLabel11);
             guna2Panel1.Controls.Add(guna2HtmlLabel2);
             guna2Panel1.Controls.Add(guna2DateTimePicker2);
@@ -142,26 +142,27 @@
             guna2HtmlLabel1.TabIndex = 27;
             guna2HtmlLabel1.Text = "Nota: Los reportes generados  son en base a las reservas activas";
             // 
-            // btnLimpiar
+            // btnGenerarReporte
             // 
-            btnLimpiar.BorderRadius = 10;
-            btnLimpiar.CustomizableEdges = customizableEdges3;
-            btnLimpiar.DisabledState.BorderColor = Color.DarkGray;
-            btnLimpiar.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnLimpiar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnLimpiar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnLimpiar.FillColor = Color.FromArgb(21, 93, 252);
-            btnLimpiar.FocusedColor = SystemColors.Control;
-            btnLimpiar.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
-            btnLimpiar.ForeColor = Color.White;
-            btnLimpiar.ImageAlign = HorizontalAlignment.Left;
-            btnLimpiar.ImageSize = new Size(16, 16);
-            btnLimpiar.Location = new Point(544, 79);
-            btnLimpiar.Name = "btnLimpiar";
-            btnLimpiar.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnLimpiar.Size = new Size(159, 37);
-            btnLimpiar.TabIndex = 26;
-            btnLimpiar.Text = "Generar reporte";
+            btnGenerarReporte.BorderRadius = 10;
+            btnGenerarReporte.CustomizableEdges = customizableEdges3;
+            btnGenerarReporte.DisabledState.BorderColor = Color.DarkGray;
+            btnGenerarReporte.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnGenerarReporte.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnGenerarReporte.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnGenerarReporte.FillColor = Color.FromArgb(21, 93, 252);
+            btnGenerarReporte.FocusedColor = SystemColors.Control;
+            btnGenerarReporte.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
+            btnGenerarReporte.ForeColor = Color.White;
+            btnGenerarReporte.ImageAlign = HorizontalAlignment.Left;
+            btnGenerarReporte.ImageSize = new Size(16, 16);
+            btnGenerarReporte.Location = new Point(544, 79);
+            btnGenerarReporte.Name = "btnGenerarReporte";
+            btnGenerarReporte.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnGenerarReporte.Size = new Size(159, 37);
+            btnGenerarReporte.TabIndex = 26;
+            btnGenerarReporte.Text = "Generar reporte";
+            btnGenerarReporte.Click += btnGenerarReporte_Click;
             // 
             // guna2HtmlLabel11
             // 
@@ -239,6 +240,14 @@
             guna2Panel2.Size = new Size(977, 380);
             guna2Panel2.TabIndex = 19;
             // 
+            // rtbReserva
+            // 
+            rtbReserva.Location = new Point(12, 11);
+            rtbReserva.Name = "rtbReserva";
+            rtbReserva.Size = new Size(936, 357);
+            rtbReserva.TabIndex = 2;
+            rtbReserva.Text = "";
+            // 
             // guna2HtmlLabel8
             // 
             guna2HtmlLabel8.BackColor = Color.Transparent;
@@ -248,14 +257,6 @@
             guna2HtmlLabel8.Size = new Size(3, 2);
             guna2HtmlLabel8.TabIndex = 1;
             guna2HtmlLabel8.Text = null;
-            // 
-            // rtbReserva
-            // 
-            rtbReserva.Location = new Point(12, 11);
-            rtbReserva.Name = "rtbReserva";
-            rtbReserva.Size = new Size(936, 357);
-            rtbReserva.TabIndex = 2;
-            rtbReserva.Text = "";
             // 
             // FrmReportes
             // 
@@ -287,7 +288,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker2;
         private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
-        private Guna.UI2.WinForms.Guna2Button btnLimpiar;
+        private Guna.UI2.WinForms.Guna2Button btnGenerarReporte;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;

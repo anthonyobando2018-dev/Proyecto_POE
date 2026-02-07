@@ -22,7 +22,7 @@ namespace Proyecto_POE
             AbrirFormEnPanel(frm);
         }
 
-        
+
 
         private void AbrirFormEnPanel(Form formulario)
         {
@@ -101,6 +101,10 @@ namespace Proyecto_POE
             boton.FillColor = Color.FromArgb(21, 93, 252);
         }
 
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //Close();
+        }
     }
 
 

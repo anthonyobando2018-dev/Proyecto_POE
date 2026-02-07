@@ -16,11 +16,13 @@ namespace CapaPresentacion.Formularios
         public FrmDocente()
         {
             InitializeComponent();
+            btnActualizar.Enabled = false;
+            btnEliminar.Enabled = false;
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            try
+            /*try
             {
                 if (txtCodigo.Text != string.Empty)
                     obj_cln_est.IdEstudiante = int.Parse(txtCodigo.Text);
@@ -67,12 +69,12 @@ namespace CapaPresentacion.Formularios
             catch (Exception ex)
             {
                 MessageBox.Show("Error al grabar los datos del estudiante  --> " + ex.Message);
-            }
+            }*/
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            try
+            /*try
             {
                 if (!int.TryParse(txtCodigo.Text, out int codigo))
                 {
@@ -96,20 +98,20 @@ namespace CapaPresentacion.Formularios
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
-            }
+            }*/
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             try
             {
-                is_nuevo = true;
+                //is_nuevo = true;
                 LimpiarControles();
 
                 btnRegistrar.Enabled = true;
-                btnEliminar.Enabled = true;
-                btnNuevo.Enabled = false;
-                btnRegistrar.Text = "Grabar";
+                btnEliminar.Enabled = false;
+                btnNuevo.Enabled = true;
+                btnActualizar.Enabled = false;
                 txtCedula.Focus();
 
             }
@@ -121,7 +123,7 @@ namespace CapaPresentacion.Formularios
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            try
+            /*try
             {
                 obj_cln_est.IdEstudiante = int.Parse(txtCodigo.Text);
 
@@ -136,13 +138,13 @@ namespace CapaPresentacion.Formularios
             catch (Exception ex)
             {
                 MessageBox.Show("Error -> " + ex.Message);
-            }
+            }*/
         }
 
 
         private void dgvDocente_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            try
+            /*try
             {
                 if (e.RowIndex < 0 || e.RowIndex >= dgvDocente.Rows.Count)
                     return;
@@ -172,7 +174,7 @@ namespace CapaPresentacion.Formularios
             catch (Exception ex)
             {
                 MessageBox.Show("Error -> " + ex.Message);
-            }
+            }*/
         }
 
         private void LimpiarControles()
@@ -190,7 +192,7 @@ namespace CapaPresentacion.Formularios
             try
             {
                 dgvDocente.DataSource = null;
-                dgvDocente.DataSource = obj_cln_est.GetListadoEstudiantes();
+                //dgvDocente.DataSource = obj_cln_est.GetListadoEstudiantes();
             }
             catch (Exception ex)
             {

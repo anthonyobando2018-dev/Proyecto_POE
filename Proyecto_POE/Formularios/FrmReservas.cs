@@ -16,11 +16,13 @@ namespace CapaPresentacion.Formularios
         public FrmReservas()
         {
             InitializeComponent();
+            btnActualizar.Enabled = false;
+            btnEliminar.Enabled = false;
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            bool habilitarGuardado = VerificarCampos();
+            /*bool habilitarGuardado = VerificarCampos();
             if (habilitarGuardado)
             {
                 try
@@ -46,7 +48,7 @@ namespace CapaPresentacion.Formularios
                 {
                     ErrorPersonalizado(ex);
                 }
-            }
+            }*/
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
@@ -58,13 +60,15 @@ namespace CapaPresentacion.Formularios
         {
             ActivarControles();
             LimpiarControles();
-            btnNuevo.Enabled = false;
+            btnRegistrar.Enabled = true;
+            btnNuevo.Enabled = true;
+            btnActualizar.Enabled = false;
             btnEliminar.Enabled = false;
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            try
+            /*try
             {
                 int idReserva = Convert.ToInt32(tbId.Text);
                 ReservaAdministradora.EliminarReserva(idReserva);
@@ -77,7 +81,7 @@ namespace CapaPresentacion.Formularios
             catch (Exception ex)
             {
                 ErrorPersonalizado(ex);
-            }
+            }*/
         }
 
         private void dgvReserva_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -142,7 +146,7 @@ namespace CapaPresentacion.Formularios
             try
             {
                 dgvReserva.DataSource = null;
-                dgvReserva.DataSource = obj_cln_est.GetListadoEstudiantes();
+                //dgvReserva.DataSource = obj_cln_est.GetListadoEstudiantes();
             }
             catch (Exception ex)
             {
