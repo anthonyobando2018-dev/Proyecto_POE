@@ -195,9 +195,5 @@ namespace CapaPresentacion.Formularios
             cmbEstado.SelectedIndex = 0;
 
         }
-
-
-
-
     }
 }
