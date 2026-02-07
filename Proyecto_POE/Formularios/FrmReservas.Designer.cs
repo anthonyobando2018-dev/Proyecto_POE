@@ -47,32 +47,34 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             guna2HtmlLabel18 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             cmbDocente = new Guna.UI2.WinForms.Guna2ComboBox();
             cmbLab = new Guna.UI2.WinForms.Guna2ComboBox();
-            dtReserva = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            nruCantidad = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            dtpDiaReserva = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            nruCantidadEstudiantes = new Guna.UI2.WinForms.Guna2NumericUpDown();
             cmbHoraInicio = new Guna.UI2.WinForms.Guna2ComboBox();
-            cmbHoraFinal = new Guna.UI2.WinForms.Guna2ComboBox();
+            cmbHoraFin = new Guna.UI2.WinForms.Guna2ComboBox();
             btnRegistrar = new Guna.UI2.WinForms.Guna2Button();
             guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             btnEliminar = new Guna.UI2.WinForms.Guna2Button();
             btnActualizar = new Guna.UI2.WinForms.Guna2Button();
             btnNuevo = new Guna.UI2.WinForms.Guna2Button();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            richTextBox1 = new RichTextBox();
+            rtbMotivoReserva = new RichTextBox();
             guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel13 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel14 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -90,9 +92,11 @@
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            cmbEstadoReserva = new Guna.UI2.WinForms.Guna2ComboBox();
+            guna2HtmlLabel19 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2GradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)nruCantidad).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nruCantidadEstudiantes).BeginInit();
             guna2GradientPanel1.SuspendLayout();
             guna2Panel1.SuspendLayout();
             SuspendLayout();
@@ -204,35 +208,35 @@
             cmbLab.Size = new Size(458, 36);
             cmbLab.TabIndex = 4;
             // 
-            // dtReserva
+            // dtpDiaReserva
             // 
-            dtReserva.BorderRadius = 10;
-            dtReserva.Checked = true;
-            dtReserva.CustomizableEdges = customizableEdges7;
-            dtReserva.FillColor = Color.White;
-            dtReserva.Font = new Font("Segoe UI", 9F);
-            dtReserva.Format = DateTimePickerFormat.Long;
-            dtReserva.Location = new Point(13, 125);
-            dtReserva.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
-            dtReserva.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
-            dtReserva.Name = "dtReserva";
-            dtReserva.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            dtReserva.Size = new Size(458, 36);
-            dtReserva.TabIndex = 6;
-            dtReserva.Value = new DateTime(2026, 2, 5, 19, 32, 24, 767);
+            dtpDiaReserva.BorderRadius = 10;
+            dtpDiaReserva.Checked = true;
+            dtpDiaReserva.CustomizableEdges = customizableEdges7;
+            dtpDiaReserva.FillColor = Color.White;
+            dtpDiaReserva.Font = new Font("Segoe UI", 9F);
+            dtpDiaReserva.Format = DateTimePickerFormat.Long;
+            dtpDiaReserva.Location = new Point(13, 125);
+            dtpDiaReserva.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            dtpDiaReserva.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            dtpDiaReserva.Name = "dtpDiaReserva";
+            dtpDiaReserva.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            dtpDiaReserva.Size = new Size(458, 36);
+            dtpDiaReserva.TabIndex = 6;
+            dtpDiaReserva.Value = new DateTime(2026, 2, 5, 19, 32, 24, 767);
             // 
-            // nruCantidad
+            // nruCantidadEstudiantes
             // 
-            nruCantidad.BackColor = Color.Transparent;
-            nruCantidad.BorderRadius = 10;
-            nruCantidad.CustomizableEdges = customizableEdges9;
-            nruCantidad.Font = new Font("Segoe UI", 9F);
-            nruCantidad.Location = new Point(486, 125);
-            nruCantidad.Name = "nruCantidad";
-            nruCantidad.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            nruCantidad.Size = new Size(458, 36);
-            nruCantidad.TabIndex = 11;
-            nruCantidad.UpDownButtonFillColor = Color.Turquoise;
+            nruCantidadEstudiantes.BackColor = Color.Transparent;
+            nruCantidadEstudiantes.BorderRadius = 10;
+            nruCantidadEstudiantes.CustomizableEdges = customizableEdges9;
+            nruCantidadEstudiantes.Font = new Font("Segoe UI", 9F);
+            nruCantidadEstudiantes.Location = new Point(486, 125);
+            nruCantidadEstudiantes.Name = "nruCantidadEstudiantes";
+            nruCantidadEstudiantes.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            nruCantidadEstudiantes.Size = new Size(458, 36);
+            nruCantidadEstudiantes.TabIndex = 11;
+            nruCantidadEstudiantes.UpDownButtonFillColor = Color.Turquoise;
             // 
             // cmbHoraInicio
             // 
@@ -252,23 +256,23 @@
             cmbHoraInicio.Size = new Size(458, 36);
             cmbHoraInicio.TabIndex = 12;
             // 
-            // cmbHoraFinal
+            // cmbHoraFin
             // 
-            cmbHoraFinal.BackColor = Color.Transparent;
-            cmbHoraFinal.BorderRadius = 10;
-            cmbHoraFinal.CustomizableEdges = customizableEdges13;
-            cmbHoraFinal.DrawMode = DrawMode.OwnerDrawFixed;
-            cmbHoraFinal.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbHoraFinal.FocusedColor = Color.FromArgb(94, 148, 255);
-            cmbHoraFinal.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            cmbHoraFinal.Font = new Font("Segoe UI", 10F);
-            cmbHoraFinal.ForeColor = Color.FromArgb(68, 88, 112);
-            cmbHoraFinal.ItemHeight = 30;
-            cmbHoraFinal.Location = new Point(486, 192);
-            cmbHoraFinal.Name = "cmbHoraFinal";
-            cmbHoraFinal.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            cmbHoraFinal.Size = new Size(458, 36);
-            cmbHoraFinal.TabIndex = 14;
+            cmbHoraFin.BackColor = Color.Transparent;
+            cmbHoraFin.BorderRadius = 10;
+            cmbHoraFin.CustomizableEdges = customizableEdges13;
+            cmbHoraFin.DrawMode = DrawMode.OwnerDrawFixed;
+            cmbHoraFin.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbHoraFin.FocusedColor = Color.FromArgb(94, 148, 255);
+            cmbHoraFin.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cmbHoraFin.Font = new Font("Segoe UI", 10F);
+            cmbHoraFin.ForeColor = Color.FromArgb(68, 88, 112);
+            cmbHoraFin.ItemHeight = 30;
+            cmbHoraFin.Location = new Point(486, 192);
+            cmbHoraFin.Name = "cmbHoraFin";
+            cmbHoraFin.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            cmbHoraFin.Size = new Size(458, 36);
+            cmbHoraFin.TabIndex = 14;
             // 
             // btnRegistrar
             // 
@@ -295,11 +299,13 @@
             // guna2GradientPanel1
             // 
             guna2GradientPanel1.BackColor = Color.White;
+            guna2GradientPanel1.Controls.Add(guna2HtmlLabel19);
+            guna2GradientPanel1.Controls.Add(cmbEstadoReserva);
             guna2GradientPanel1.Controls.Add(btnEliminar);
             guna2GradientPanel1.Controls.Add(btnActualizar);
             guna2GradientPanel1.Controls.Add(btnNuevo);
             guna2GradientPanel1.Controls.Add(guna2HtmlLabel1);
-            guna2GradientPanel1.Controls.Add(richTextBox1);
+            guna2GradientPanel1.Controls.Add(rtbMotivoReserva);
             guna2GradientPanel1.Controls.Add(guna2HtmlLabel12);
             guna2GradientPanel1.Controls.Add(guna2HtmlLabel13);
             guna2GradientPanel1.Controls.Add(guna2HtmlLabel14);
@@ -308,23 +314,23 @@
             guna2GradientPanel1.Controls.Add(guna2HtmlLabel17);
             guna2GradientPanel1.Controls.Add(btnRegistrar);
             guna2GradientPanel1.Controls.Add(guna2HtmlLabel10);
-            guna2GradientPanel1.Controls.Add(cmbHoraFinal);
+            guna2GradientPanel1.Controls.Add(cmbHoraFin);
             guna2GradientPanel1.Controls.Add(cmbHoraInicio);
-            guna2GradientPanel1.Controls.Add(nruCantidad);
-            guna2GradientPanel1.Controls.Add(dtReserva);
+            guna2GradientPanel1.Controls.Add(nruCantidadEstudiantes);
+            guna2GradientPanel1.Controls.Add(dtpDiaReserva);
             guna2GradientPanel1.Controls.Add(cmbLab);
             guna2GradientPanel1.Controls.Add(cmbDocente);
-            guna2GradientPanel1.CustomizableEdges = customizableEdges23;
+            guna2GradientPanel1.CustomizableEdges = customizableEdges25;
             guna2GradientPanel1.Location = new Point(12, 70);
             guna2GradientPanel1.Name = "guna2GradientPanel1";
-            guna2GradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            guna2GradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges26;
             guna2GradientPanel1.Size = new Size(978, 377);
             guna2GradientPanel1.TabIndex = 2;
             // 
             // btnEliminar
             // 
             btnEliminar.BorderRadius = 10;
-            btnEliminar.CustomizableEdges = customizableEdges17;
+            btnEliminar.CustomizableEdges = customizableEdges19;
             btnEliminar.DisabledState.BorderColor = Color.DarkGray;
             btnEliminar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnEliminar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -337,7 +343,7 @@
             btnEliminar.ImageSize = new Size(16, 16);
             btnEliminar.Location = new Point(514, 337);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            btnEliminar.ShadowDecoration.CustomizableEdges = customizableEdges20;
             btnEliminar.Size = new Size(162, 34);
             btnEliminar.TabIndex = 33;
             btnEliminar.Text = "Eliminar";
@@ -347,7 +353,7 @@
             // btnActualizar
             // 
             btnActualizar.BorderRadius = 10;
-            btnActualizar.CustomizableEdges = customizableEdges19;
+            btnActualizar.CustomizableEdges = customizableEdges21;
             btnActualizar.DisabledState.BorderColor = Color.DarkGray;
             btnActualizar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnActualizar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -360,7 +366,7 @@
             btnActualizar.ImageSize = new Size(16, 16);
             btnActualizar.Location = new Point(178, 336);
             btnActualizar.Name = "btnActualizar";
-            btnActualizar.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            btnActualizar.ShadowDecoration.CustomizableEdges = customizableEdges22;
             btnActualizar.Size = new Size(162, 34);
             btnActualizar.TabIndex = 32;
             btnActualizar.Text = "Actualizar";
@@ -370,7 +376,7 @@
             // btnNuevo
             // 
             btnNuevo.BorderRadius = 10;
-            btnNuevo.CustomizableEdges = customizableEdges21;
+            btnNuevo.CustomizableEdges = customizableEdges23;
             btnNuevo.DisabledState.BorderColor = Color.DarkGray;
             btnNuevo.DisabledState.CustomBorderColor = Color.DarkGray;
             btnNuevo.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -383,7 +389,7 @@
             btnNuevo.ImageSize = new Size(16, 16);
             btnNuevo.Location = new Point(346, 337);
             btnNuevo.Name = "btnNuevo";
-            btnNuevo.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            btnNuevo.ShadowDecoration.CustomizableEdges = customizableEdges24;
             btnNuevo.Size = new Size(162, 34);
             btnNuevo.TabIndex = 31;
             btnNuevo.Text = "Nuevo";
@@ -400,13 +406,13 @@
             guna2HtmlLabel1.TabIndex = 25;
             guna2HtmlLabel1.Text = "Motivo de Reserva";
             // 
-            // richTextBox1
+            // rtbMotivoReserva
             // 
-            richTextBox1.Location = new Point(13, 259);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(444, 72);
-            richTextBox1.TabIndex = 24;
-            richTextBox1.Text = "";
+            rtbMotivoReserva.Location = new Point(13, 259);
+            rtbMotivoReserva.Name = "rtbMotivoReserva";
+            rtbMotivoReserva.Size = new Size(444, 72);
+            rtbMotivoReserva.TabIndex = 24;
+            rtbMotivoReserva.Text = "";
             // 
             // guna2HtmlLabel12
             // 
@@ -573,12 +579,40 @@
             guna2Panel1.BackColor = Color.White;
             guna2Panel1.Controls.Add(guna2HtmlLabel11);
             guna2Panel1.Controls.Add(guna2HtmlLabel2);
-            guna2Panel1.CustomizableEdges = customizableEdges25;
+            guna2Panel1.CustomizableEdges = customizableEdges27;
             guna2Panel1.Location = new Point(0, 1);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges28;
             guna2Panel1.Size = new Size(1020, 63);
             guna2Panel1.TabIndex = 7;
+            // 
+            // cmbEstadoReserva
+            // 
+            cmbEstadoReserva.BackColor = Color.Transparent;
+            cmbEstadoReserva.BorderRadius = 10;
+            cmbEstadoReserva.CustomizableEdges = customizableEdges17;
+            cmbEstadoReserva.DrawMode = DrawMode.OwnerDrawFixed;
+            cmbEstadoReserva.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbEstadoReserva.FocusedColor = Color.FromArgb(94, 148, 255);
+            cmbEstadoReserva.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cmbEstadoReserva.Font = new Font("Segoe UI", 10F);
+            cmbEstadoReserva.ForeColor = Color.FromArgb(68, 88, 112);
+            cmbEstadoReserva.ItemHeight = 30;
+            cmbEstadoReserva.Location = new Point(486, 259);
+            cmbEstadoReserva.Name = "cmbEstadoReserva";
+            cmbEstadoReserva.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            cmbEstadoReserva.Size = new Size(458, 36);
+            cmbEstadoReserva.TabIndex = 34;
+            // 
+            // guna2HtmlLabel19
+            // 
+            guna2HtmlLabel19.BackColor = Color.Transparent;
+            guna2HtmlLabel19.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel19.Location = new Point(486, 234);
+            guna2HtmlLabel19.Name = "guna2HtmlLabel19";
+            guna2HtmlLabel19.Size = new Size(95, 19);
+            guna2HtmlLabel19.TabIndex = 35;
+            guna2HtmlLabel19.Text = "Estado Reserva";
             // 
             // FrmReservas
             // 
@@ -593,7 +627,7 @@
             guna2GradientPanel2.ResumeLayout(false);
             guna2GradientPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)nruCantidad).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nruCantidadEstudiantes).EndInit();
             guna2GradientPanel1.ResumeLayout(false);
             guna2GradientPanel1.PerformLayout();
             guna2Panel1.ResumeLayout(false);
@@ -606,10 +640,10 @@
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
         private Guna.UI2.WinForms.Guna2ComboBox cmbDocente;
         private Guna.UI2.WinForms.Guna2ComboBox cmbLab;
-        private Guna.UI2.WinForms.Guna2DateTimePicker dtReserva;
-        private Guna.UI2.WinForms.Guna2NumericUpDown nruCantidad;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpDiaReserva;
+        private Guna.UI2.WinForms.Guna2NumericUpDown nruCantidadEstudiantes;
         private Guna.UI2.WinForms.Guna2ComboBox cmbHoraInicio;
-        private Guna.UI2.WinForms.Guna2ComboBox cmbHoraFinal;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbHoraFin;
         private Guna.UI2.WinForms.Guna2Button btnRegistrar;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
@@ -630,10 +664,12 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel18;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private RichTextBox richTextBox1;
+        private RichTextBox rtbMotivoReserva;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2Button btnEliminar;
         private Guna.UI2.WinForms.Guna2Button btnActualizar;
         private Guna.UI2.WinForms.Guna2Button btnNuevo;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel19;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbEstadoReserva;
     }
 }
