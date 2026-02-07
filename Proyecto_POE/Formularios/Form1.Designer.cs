@@ -44,6 +44,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panelMenu = new Guna.UI2.WinForms.Guna2Panel();
             btnReportes = new Guna.UI2.WinForms.Guna2Button();
             btnConsultas = new Guna.UI2.WinForms.Guna2Button();
@@ -52,11 +54,17 @@
             btnLaboratorio = new Guna.UI2.WinForms.Guna2Button();
             btnPrincipal = new Guna.UI2.WinForms.Guna2Button();
             panelPrincipal = new Guna.UI2.WinForms.Guna2Panel();
+            guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             panelMenu.SuspendLayout();
+            guna2CustomGradientPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // panelMenu
             // 
+            panelMenu.BackColor = Color.White;
+            panelMenu.BorderColor = Color.Transparent;
             panelMenu.Controls.Add(btnReportes);
             panelMenu.Controls.Add(btnConsultas);
             panelMenu.Controls.Add(btnReservas);
@@ -64,10 +72,10 @@
             panelMenu.Controls.Add(btnLaboratorio);
             panelMenu.Controls.Add(btnPrincipal);
             panelMenu.CustomizableEdges = customizableEdges13;
-            panelMenu.Location = new Point(0, 2);
+            panelMenu.Location = new Point(0, 166);
             panelMenu.Name = "panelMenu";
             panelMenu.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            panelMenu.Size = new Size(208, 720);
+            panelMenu.Size = new Size(208, 556);
             panelMenu.TabIndex = 0;
             // 
             // btnReportes
@@ -84,7 +92,7 @@
             btnReportes.ForeColor = Color.Black;
             btnReportes.Image = CapaPresentacion.Properties.Resources.reportes;
             btnReportes.ImageAlign = HorizontalAlignment.Left;
-            btnReportes.Location = new Point(12, 391);
+            btnReportes.Location = new Point(12, 275);
             btnReportes.Name = "btnReportes";
             btnReportes.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnReportes.Size = new Size(180, 45);
@@ -107,7 +115,7 @@
             btnConsultas.ForeColor = Color.Black;
             btnConsultas.Image = CapaPresentacion.Properties.Resources.consulta;
             btnConsultas.ImageAlign = HorizontalAlignment.Left;
-            btnConsultas.Location = new Point(12, 340);
+            btnConsultas.Location = new Point(12, 224);
             btnConsultas.Name = "btnConsultas";
             btnConsultas.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnConsultas.Size = new Size(180, 45);
@@ -130,7 +138,7 @@
             btnReservas.ForeColor = Color.Black;
             btnReservas.Image = CapaPresentacion.Properties.Resources.reserva;
             btnReservas.ImageAlign = HorizontalAlignment.Left;
-            btnReservas.Location = new Point(12, 289);
+            btnReservas.Location = new Point(12, 173);
             btnReservas.Name = "btnReservas";
             btnReservas.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnReservas.Size = new Size(180, 45);
@@ -153,7 +161,7 @@
             btnDocentes.ForeColor = Color.Black;
             btnDocentes.Image = CapaPresentacion.Properties.Resources.Docente;
             btnDocentes.ImageAlign = HorizontalAlignment.Left;
-            btnDocentes.Location = new Point(12, 238);
+            btnDocentes.Location = new Point(12, 122);
             btnDocentes.Name = "btnDocentes";
             btnDocentes.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnDocentes.Size = new Size(180, 45);
@@ -176,7 +184,7 @@
             btnLaboratorio.ForeColor = Color.Black;
             btnLaboratorio.Image = CapaPresentacion.Properties.Resources.laboratorio;
             btnLaboratorio.ImageAlign = HorizontalAlignment.Left;
-            btnLaboratorio.Location = new Point(12, 187);
+            btnLaboratorio.Location = new Point(12, 71);
             btnLaboratorio.Name = "btnLaboratorio";
             btnLaboratorio.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btnLaboratorio.Size = new Size(180, 45);
@@ -199,7 +207,7 @@
             btnPrincipal.ForeColor = Color.Black;
             btnPrincipal.Image = CapaPresentacion.Properties.Resources.prioncipal;
             btnPrincipal.ImageAlign = HorizontalAlignment.Left;
-            btnPrincipal.Location = new Point(12, 136);
+            btnPrincipal.Location = new Point(12, 20);
             btnPrincipal.Name = "btnPrincipal";
             btnPrincipal.ShadowDecoration.CustomizableEdges = customizableEdges12;
             btnPrincipal.Size = new Size(180, 45);
@@ -217,16 +225,52 @@
             panelPrincipal.Size = new Size(1029, 720);
             panelPrincipal.TabIndex = 1;
             // 
+            // guna2CustomGradientPanel1
+            // 
+            guna2CustomGradientPanel1.BackColor = Color.White;
+            guna2CustomGradientPanel1.Controls.Add(guna2HtmlLabel12);
+            guna2CustomGradientPanel1.Controls.Add(guna2HtmlLabel3);
+            guna2CustomGradientPanel1.CustomizableEdges = customizableEdges17;
+            guna2CustomGradientPanel1.Location = new Point(0, 0);
+            guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
+            guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            guna2CustomGradientPanel1.Size = new Size(205, 166);
+            guna2CustomGradientPanel1.TabIndex = 2;
+            // 
+            // guna2HtmlLabel3
+            // 
+            guna2HtmlLabel3.BackColor = Color.Transparent;
+            guna2HtmlLabel3.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel3.Location = new Point(12, 83);
+            guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            guna2HtmlLabel3.Size = new Size(171, 27);
+            guna2HtmlLabel3.TabIndex = 1;
+            guna2HtmlLabel3.Text = "Sistema de Gestión\r\n";
+            // 
+            // guna2HtmlLabel12
+            // 
+            guna2HtmlLabel12.BackColor = Color.Transparent;
+            guna2HtmlLabel12.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel12.ForeColor = Color.Gray;
+            guna2HtmlLabel12.Location = new Point(12, 116);
+            guna2HtmlLabel12.Name = "guna2HtmlLabel12";
+            guna2HtmlLabel12.Size = new Size(79, 19);
+            guna2HtmlLabel12.TabIndex = 19;
+            guna2HtmlLabel12.Text = "Laboratorios";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1232, 721);
+            Controls.Add(guna2CustomGradientPanel1);
             Controls.Add(panelPrincipal);
             Controls.Add(panelMenu);
             Name = "Form1";
             Text = "Form1";
             panelMenu.ResumeLayout(false);
+            guna2CustomGradientPanel1.ResumeLayout(false);
+            guna2CustomGradientPanel1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -240,5 +284,8 @@
         private Guna.UI2.WinForms.Guna2Button btnReservas;
         private Guna.UI2.WinForms.Guna2Button btnDocentes;
         private Guna.UI2.WinForms.Guna2Button btnLaboratorio;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
     }
 }

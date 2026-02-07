@@ -47,12 +47,18 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             btnBuscar = new Guna.UI2.WinForms.Guna2Button();
             guna2DateTimePicker2 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
+            cmbEstado = new Guna.UI2.WinForms.Guna2ComboBox();
             guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
@@ -60,17 +66,18 @@
             guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2Panel1.SuspendLayout();
             guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).BeginInit();
+            guna2Panel3.SuspendLayout();
             SuspendLayout();
             // 
             // guna2Panel1
             // 
+            guna2Panel1.BackColor = Color.White;
+            guna2Panel1.BorderRadius = 10;
             guna2Panel1.Controls.Add(guna2HtmlLabel11);
             guna2Panel1.Controls.Add(guna2HtmlLabel2);
             guna2Panel1.Controls.Add(guna2HtmlLabel1);
@@ -79,7 +86,7 @@
             guna2Panel1.Controls.Add(btnBuscar);
             guna2Panel1.Controls.Add(guna2DateTimePicker2);
             guna2Panel1.Controls.Add(guna2DateTimePicker1);
-            guna2Panel1.Controls.Add(guna2ComboBox2);
+            guna2Panel1.Controls.Add(cmbEstado);
             guna2Panel1.Controls.Add(guna2ComboBox1);
             guna2Panel1.Controls.Add(guna2HtmlLabel3);
             guna2Panel1.CustomizableEdges = customizableEdges13;
@@ -89,6 +96,46 @@
             guna2Panel1.Size = new Size(949, 205);
             guna2Panel1.TabIndex = 3;
             // 
+            // guna2HtmlLabel11
+            // 
+            guna2HtmlLabel11.BackColor = Color.Transparent;
+            guna2HtmlLabel11.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel11.Location = new Point(250, 59);
+            guna2HtmlLabel11.Name = "guna2HtmlLabel11";
+            guna2HtmlLabel11.Size = new Size(79, 19);
+            guna2HtmlLabel11.TabIndex = 21;
+            guna2HtmlLabel11.Text = "Fecha Desde";
+            // 
+            // guna2HtmlLabel2
+            // 
+            guna2HtmlLabel2.BackColor = Color.Transparent;
+            guna2HtmlLabel2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel2.Location = new Point(480, 58);
+            guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            guna2HtmlLabel2.Size = new Size(77, 19);
+            guna2HtmlLabel2.TabIndex = 20;
+            guna2HtmlLabel2.Text = "Fecha Hasta";
+            // 
+            // guna2HtmlLabel1
+            // 
+            guna2HtmlLabel1.BackColor = Color.Transparent;
+            guna2HtmlLabel1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel1.Location = new Point(713, 58);
+            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            guna2HtmlLabel1.Size = new Size(44, 19);
+            guna2HtmlLabel1.TabIndex = 19;
+            guna2HtmlLabel1.Text = "Estado ";
+            // 
+            // guna2HtmlLabel12
+            // 
+            guna2HtmlLabel12.BackColor = Color.Transparent;
+            guna2HtmlLabel12.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel12.Location = new Point(18, 59);
+            guna2HtmlLabel12.Name = "guna2HtmlLabel12";
+            guna2HtmlLabel12.Size = new Size(73, 19);
+            guna2HtmlLabel12.TabIndex = 18;
+            guna2HtmlLabel12.Text = "Laboratorio";
+            // 
             // guna2Button2
             // 
             guna2Button2.BorderRadius = 10;
@@ -97,14 +144,19 @@
             guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button2.FillColor = Color.White;
             guna2Button2.Font = new Font("Segoe UI", 9F);
-            guna2Button2.ForeColor = Color.White;
-            guna2Button2.Location = new Point(142, 145);
+            guna2Button2.ForeColor = Color.Black;
+            guna2Button2.Image = Properties.Resources.limpiar;
+            guna2Button2.ImageAlign = HorizontalAlignment.Left;
+            guna2Button2.ImageSize = new Size(16, 16);
+            guna2Button2.Location = new Point(132, 145);
             guna2Button2.Name = "guna2Button2";
             guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button2.Size = new Size(129, 37);
+            guna2Button2.Size = new Size(134, 37);
             guna2Button2.TabIndex = 10;
             guna2Button2.Text = "Limpiar Filtros ";
+            guna2Button2.TextAlign = HorizontalAlignment.Right;
             // 
             // btnBuscar
             // 
@@ -116,18 +168,23 @@
             btnBuscar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnBuscar.Font = new Font("Segoe UI", 9F);
             btnBuscar.ForeColor = Color.White;
+            btnBuscar.Image = Properties.Resources.buscar;
+            btnBuscar.ImageAlign = HorizontalAlignment.Left;
+            btnBuscar.ImageSize = new Size(16, 16);
             btnBuscar.Location = new Point(18, 145);
             btnBuscar.Name = "btnBuscar";
             btnBuscar.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnBuscar.Size = new Size(99, 37);
+            btnBuscar.Size = new Size(90, 37);
             btnBuscar.TabIndex = 9;
             btnBuscar.Text = "Buscar";
+            btnBuscar.TextAlign = HorizontalAlignment.Right;
             // 
             // guna2DateTimePicker2
             // 
             guna2DateTimePicker2.BorderRadius = 10;
             guna2DateTimePicker2.Checked = true;
             guna2DateTimePicker2.CustomizableEdges = customizableEdges5;
+            guna2DateTimePicker2.FillColor = Color.White;
             guna2DateTimePicker2.Font = new Font("Segoe UI", 9F);
             guna2DateTimePicker2.Format = DateTimePickerFormat.Long;
             guna2DateTimePicker2.Location = new Point(480, 83);
@@ -144,6 +201,7 @@
             guna2DateTimePicker1.BorderRadius = 10;
             guna2DateTimePicker1.Checked = true;
             guna2DateTimePicker1.CustomizableEdges = customizableEdges7;
+            guna2DateTimePicker1.FillColor = Color.White;
             guna2DateTimePicker1.Font = new Font("Segoe UI", 9F);
             guna2DateTimePicker1.Format = DateTimePickerFormat.Long;
             guna2DateTimePicker1.Location = new Point(250, 83);
@@ -155,23 +213,24 @@
             guna2DateTimePicker1.TabIndex = 7;
             guna2DateTimePicker1.Value = new DateTime(2026, 2, 6, 1, 21, 14, 946);
             // 
-            // guna2ComboBox2
+            // cmbEstado
             // 
-            guna2ComboBox2.BackColor = Color.Transparent;
-            guna2ComboBox2.BorderRadius = 10;
-            guna2ComboBox2.CustomizableEdges = customizableEdges9;
-            guna2ComboBox2.DrawMode = DrawMode.OwnerDrawFixed;
-            guna2ComboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
-            guna2ComboBox2.FocusedColor = Color.FromArgb(94, 148, 255);
-            guna2ComboBox2.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2ComboBox2.Font = new Font("Segoe UI", 10F);
-            guna2ComboBox2.ForeColor = Color.FromArgb(68, 88, 112);
-            guna2ComboBox2.ItemHeight = 30;
-            guna2ComboBox2.Location = new Point(713, 84);
-            guna2ComboBox2.Name = "guna2ComboBox2";
-            guna2ComboBox2.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2ComboBox2.Size = new Size(214, 36);
-            guna2ComboBox2.TabIndex = 6;
+            cmbEstado.BackColor = Color.Transparent;
+            cmbEstado.BorderRadius = 10;
+            cmbEstado.CustomizableEdges = customizableEdges9;
+            cmbEstado.DrawMode = DrawMode.OwnerDrawFixed;
+            cmbEstado.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbEstado.FocusedColor = Color.FromArgb(94, 148, 255);
+            cmbEstado.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cmbEstado.Font = new Font("Segoe UI", 10F);
+            cmbEstado.ForeColor = Color.FromArgb(68, 88, 112);
+            cmbEstado.ItemHeight = 30;
+            cmbEstado.Items.AddRange(new object[] { "Todos los Estados ", "Activa", "Cancelada ", "Finalizada" });
+            cmbEstado.Location = new Point(713, 84);
+            cmbEstado.Name = "cmbEstado";
+            cmbEstado.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            cmbEstado.Size = new Size(214, 36);
+            cmbEstado.TabIndex = 6;
             // 
             // guna2ComboBox1
             // 
@@ -203,6 +262,7 @@
             // 
             // guna2Panel2
             // 
+            guna2Panel2.BackColor = SystemColors.Control;
             guna2Panel2.Controls.Add(guna2DataGridView1);
             guna2Panel2.Controls.Add(guna2HtmlLabel8);
             guna2Panel2.CustomizableEdges = customizableEdges15;
@@ -276,7 +336,7 @@
             // 
             guna2HtmlLabel9.BackColor = Color.Transparent;
             guna2HtmlLabel9.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel9.Location = new Point(22, 12);
+            guna2HtmlLabel9.Location = new Point(12, 1);
             guna2HtmlLabel9.Name = "guna2HtmlLabel9";
             guna2HtmlLabel9.Size = new Size(209, 32);
             guna2HtmlLabel9.TabIndex = 5;
@@ -286,59 +346,40 @@
             // 
             guna2HtmlLabel10.BackColor = Color.Transparent;
             guna2HtmlLabel10.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel10.Location = new Point(22, 40);
+            guna2HtmlLabel10.Location = new Point(12, 28);
             guna2HtmlLabel10.Name = "guna2HtmlLabel10";
             guna2HtmlLabel10.Size = new Size(374, 19);
             guna2HtmlLabel10.TabIndex = 6;
             guna2HtmlLabel10.Text = "Sistema de Gestión de Reservas de Laboratorios de Cómputo";
             // 
-            // guna2HtmlLabel12
+            // guna2Panel3
             // 
-            guna2HtmlLabel12.BackColor = Color.Transparent;
-            guna2HtmlLabel12.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel12.Location = new Point(18, 59);
-            guna2HtmlLabel12.Name = "guna2HtmlLabel12";
-            guna2HtmlLabel12.Size = new Size(73, 19);
-            guna2HtmlLabel12.TabIndex = 18;
-            guna2HtmlLabel12.Text = "Laboratorio";
+            guna2Panel3.BackColor = Color.White;
+            guna2Panel3.Controls.Add(guna2HtmlLabel9);
+            guna2Panel3.Controls.Add(guna2HtmlLabel10);
+            guna2Panel3.Controls.Add(guna2HtmlLabel5);
+            guna2Panel3.CustomizableEdges = customizableEdges17;
+            guna2Panel3.Location = new Point(2, 1);
+            guna2Panel3.Name = "guna2Panel3";
+            guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            guna2Panel3.Size = new Size(1020, 63);
+            guna2Panel3.TabIndex = 16;
             // 
-            // guna2HtmlLabel1
+            // guna2HtmlLabel5
             // 
-            guna2HtmlLabel1.BackColor = Color.Transparent;
-            guna2HtmlLabel1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel1.Location = new Point(713, 58);
-            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(44, 19);
-            guna2HtmlLabel1.TabIndex = 19;
-            guna2HtmlLabel1.Text = "Estado ";
-            // 
-            // guna2HtmlLabel2
-            // 
-            guna2HtmlLabel2.BackColor = Color.Transparent;
-            guna2HtmlLabel2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel2.Location = new Point(480, 58);
-            guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            guna2HtmlLabel2.Size = new Size(77, 19);
-            guna2HtmlLabel2.TabIndex = 20;
-            guna2HtmlLabel2.Text = "Fecha Hasta";
-            // 
-            // guna2HtmlLabel11
-            // 
-            guna2HtmlLabel11.BackColor = Color.Transparent;
-            guna2HtmlLabel11.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel11.Location = new Point(250, 59);
-            guna2HtmlLabel11.Name = "guna2HtmlLabel11";
-            guna2HtmlLabel11.Size = new Size(79, 19);
-            guna2HtmlLabel11.TabIndex = 21;
-            guna2HtmlLabel11.Text = "Fecha Desde";
+            guna2HtmlLabel5.BackColor = Color.Transparent;
+            guna2HtmlLabel5.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel5.Location = new Point(12, 3);
+            guna2HtmlLabel5.Name = "guna2HtmlLabel5";
+            guna2HtmlLabel5.Size = new Size(3, 2);
+            guna2HtmlLabel5.TabIndex = 1;
             // 
             // FrmConsultas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1002, 727);
-            Controls.Add(guna2HtmlLabel10);
-            Controls.Add(guna2HtmlLabel9);
+            Controls.Add(guna2Panel3);
             Controls.Add(guna2Panel2);
             Controls.Add(guna2Panel1);
             Name = "FrmConsultas";
@@ -348,8 +389,9 @@
             guna2Panel2.ResumeLayout(false);
             guna2Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).EndInit();
+            guna2Panel3.ResumeLayout(false);
+            guna2Panel3.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -357,7 +399,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker2;
         private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbEstado;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
@@ -370,5 +412,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
     }
 }

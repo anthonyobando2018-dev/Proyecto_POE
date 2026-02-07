@@ -43,11 +43,17 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             txtNombreLab = new Guna.UI2.WinForms.Guna2TextBox();
             nrCapacidad = new Guna.UI2.WinForms.Guna2NumericUpDown();
             cmbLab = new Guna.UI2.WinForms.Guna2ComboBox();
             guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel13 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btnGuardar = new Guna.UI2.WinForms.Guna2Button();
             guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -55,21 +61,19 @@
             Eliminar = new DataGridViewButtonColumn();
             guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel13 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             ((System.ComponentModel.ISupportInitialize)nrCapacidad).BeginInit();
             guna2GradientPanel1.SuspendLayout();
             guna2GradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).BeginInit();
+            guna2Panel1.SuspendLayout();
             SuspendLayout();
             // 
             // guna2HtmlLabel1
             // 
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel1.Location = new Point(12, 12);
+            guna2HtmlLabel1.Location = new Point(12, 3);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             guna2HtmlLabel1.Size = new Size(238, 32);
             guna2HtmlLabel1.TabIndex = 1;
@@ -128,6 +132,7 @@
             // 
             // guna2GradientPanel1
             // 
+            guna2GradientPanel1.BackColor = Color.White;
             guna2GradientPanel1.Controls.Add(guna2HtmlLabel8);
             guna2GradientPanel1.Controls.Add(guna2HtmlLabel3);
             guna2GradientPanel1.Controls.Add(guna2HtmlLabel10);
@@ -137,11 +142,51 @@
             guna2GradientPanel1.Controls.Add(nrCapacidad);
             guna2GradientPanel1.Controls.Add(txtNombreLab);
             guna2GradientPanel1.CustomizableEdges = customizableEdges9;
-            guna2GradientPanel1.Location = new Point(12, 93);
+            guna2GradientPanel1.Location = new Point(12, 83);
             guna2GradientPanel1.Name = "guna2GradientPanel1";
             guna2GradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2GradientPanel1.Size = new Size(978, 178);
+            guna2GradientPanel1.Size = new Size(978, 188);
             guna2GradientPanel1.TabIndex = 12;
+            // 
+            // guna2HtmlLabel8
+            // 
+            guna2HtmlLabel8.BackColor = Color.Transparent;
+            guna2HtmlLabel8.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel8.Location = new Point(327, 48);
+            guna2HtmlLabel8.Name = "guna2HtmlLabel8";
+            guna2HtmlLabel8.Size = new Size(65, 19);
+            guna2HtmlLabel8.TabIndex = 22;
+            guna2HtmlLabel8.Text = "Capacidad\r\n";
+            // 
+            // guna2HtmlLabel3
+            // 
+            guna2HtmlLabel3.BackColor = Color.Transparent;
+            guna2HtmlLabel3.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel3.Location = new Point(660, 48);
+            guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            guna2HtmlLabel3.Size = new Size(44, 19);
+            guna2HtmlLabel3.TabIndex = 21;
+            guna2HtmlLabel3.Text = "Estado ";
+            // 
+            // guna2HtmlLabel10
+            // 
+            guna2HtmlLabel10.BackColor = Color.Transparent;
+            guna2HtmlLabel10.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel10.Location = new Point(10, 3);
+            guna2HtmlLabel10.Name = "guna2HtmlLabel10";
+            guna2HtmlLabel10.Size = new Size(147, 23);
+            guna2HtmlLabel10.TabIndex = 18;
+            guna2HtmlLabel10.Text = "Nuevo Laboratorio\r\n\r\n";
+            // 
+            // guna2HtmlLabel13
+            // 
+            guna2HtmlLabel13.BackColor = Color.Transparent;
+            guna2HtmlLabel13.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel13.Location = new Point(13, 48);
+            guna2HtmlLabel13.Name = "guna2HtmlLabel13";
+            guna2HtmlLabel13.Size = new Size(146, 19);
+            guna2HtmlLabel13.TabIndex = 20;
+            guna2HtmlLabel13.Text = "Nombre del laboratorio";
             // 
             // btnGuardar
             // 
@@ -166,13 +211,14 @@
             // 
             // guna2GradientPanel2
             // 
+            guna2GradientPanel2.BackColor = Color.White;
             guna2GradientPanel2.Controls.Add(guna2DataGridView1);
             guna2GradientPanel2.Controls.Add(guna2HtmlLabel7);
             guna2GradientPanel2.CustomizableEdges = customizableEdges11;
-            guna2GradientPanel2.Location = new Point(12, 277);
+            guna2GradientPanel2.Location = new Point(12, 292);
             guna2GradientPanel2.Name = "guna2GradientPanel2";
             guna2GradientPanel2.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2GradientPanel2.Size = new Size(978, 416);
+            guna2GradientPanel2.Size = new Size(978, 423);
             guna2GradientPanel2.TabIndex = 13;
             // 
             // guna2DataGridView1
@@ -241,7 +287,7 @@
             // 
             guna2HtmlLabel7.BackColor = Color.Transparent;
             guna2HtmlLabel7.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel7.Location = new Point(13, 24);
+            guna2HtmlLabel7.Location = new Point(13, 15);
             guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             guna2HtmlLabel7.Size = new Size(133, 19);
             guna2HtmlLabel7.TabIndex = 12;
@@ -251,59 +297,30 @@
             // 
             guna2HtmlLabel2.BackColor = Color.Transparent;
             guna2HtmlLabel2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel2.Location = new Point(12, 50);
+            guna2HtmlLabel2.Location = new Point(12, 41);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             guna2HtmlLabel2.Size = new Size(374, 19);
             guna2HtmlLabel2.TabIndex = 14;
             guna2HtmlLabel2.Text = "Sistema de Gestión de Reservas de Laboratorios de Cómputo";
             // 
-            // guna2HtmlLabel10
+            // guna2Panel1
             // 
-            guna2HtmlLabel10.BackColor = Color.Transparent;
-            guna2HtmlLabel10.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel10.Location = new Point(10, 3);
-            guna2HtmlLabel10.Name = "guna2HtmlLabel10";
-            guna2HtmlLabel10.Size = new Size(147, 23);
-            guna2HtmlLabel10.TabIndex = 18;
-            guna2HtmlLabel10.Text = "Nuevo Laboratorio\r\n\r\n";
-            // 
-            // guna2HtmlLabel13
-            // 
-            guna2HtmlLabel13.BackColor = Color.Transparent;
-            guna2HtmlLabel13.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel13.Location = new Point(13, 48);
-            guna2HtmlLabel13.Name = "guna2HtmlLabel13";
-            guna2HtmlLabel13.Size = new Size(146, 19);
-            guna2HtmlLabel13.TabIndex = 20;
-            guna2HtmlLabel13.Text = "Nombre del laboratorio";
-            // 
-            // guna2HtmlLabel3
-            // 
-            guna2HtmlLabel3.BackColor = Color.Transparent;
-            guna2HtmlLabel3.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel3.Location = new Point(660, 48);
-            guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            guna2HtmlLabel3.Size = new Size(44, 19);
-            guna2HtmlLabel3.TabIndex = 21;
-            guna2HtmlLabel3.Text = "Estado ";
-            // 
-            // guna2HtmlLabel8
-            // 
-            guna2HtmlLabel8.BackColor = Color.Transparent;
-            guna2HtmlLabel8.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel8.Location = new Point(327, 48);
-            guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-            guna2HtmlLabel8.Size = new Size(65, 19);
-            guna2HtmlLabel8.TabIndex = 22;
-            guna2HtmlLabel8.Text = "Capacidad\r\n";
+            guna2Panel1.BackColor = Color.White;
+            guna2Panel1.Controls.Add(guna2HtmlLabel2);
+            guna2Panel1.Controls.Add(guna2HtmlLabel1);
+            guna2Panel1.CustomizableEdges = customizableEdges13;
+            guna2Panel1.Location = new Point(1, 1);
+            guna2Panel1.Name = "guna2Panel1";
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            guna2Panel1.Size = new Size(1020, 63);
+            guna2Panel1.TabIndex = 15;
             // 
             // FrmLaboratorio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1002, 727);
-            Controls.Add(guna2HtmlLabel2);
-            Controls.Add(guna2HtmlLabel1);
+            Controls.Add(guna2Panel1);
             Controls.Add(guna2GradientPanel1);
             Controls.Add(guna2GradientPanel2);
             Name = "FrmLaboratorio";
@@ -314,8 +331,9 @@
             guna2GradientPanel2.ResumeLayout(false);
             guna2GradientPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).EndInit();
+            guna2Panel1.ResumeLayout(false);
+            guna2Panel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -336,5 +354,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel13;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
     }
 }

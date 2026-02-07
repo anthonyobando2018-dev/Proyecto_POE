@@ -47,6 +47,8 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             txtApellidos = new Guna.UI2.WinForms.Guna2TextBox();
@@ -67,16 +69,18 @@
             btnModificar = new DataGridViewButtonColumn();
             eliminar = new DataGridViewButtonColumn();
             guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             guna2Panel1.SuspendLayout();
             guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).BeginInit();
+            guna2Panel3.SuspendLayout();
             SuspendLayout();
             // 
             // guna2HtmlLabel1
             // 
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel1.Location = new Point(12, 2);
+            guna2HtmlLabel1.Location = new Point(18, 3);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             guna2HtmlLabel1.Size = new Size(204, 32);
             guna2HtmlLabel1.TabIndex = 0;
@@ -86,7 +90,7 @@
             // 
             guna2HtmlLabel2.BackColor = Color.Transparent;
             guna2HtmlLabel2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel2.Location = new Point(12, 40);
+            guna2HtmlLabel2.Location = new Point(18, 37);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             guna2HtmlLabel2.Size = new Size(374, 19);
             guna2HtmlLabel2.TabIndex = 1;
@@ -272,7 +276,7 @@
             // 
             guna2HtmlLabel3.BackColor = Color.Transparent;
             guna2HtmlLabel3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel3.Location = new Point(33, 13);
+            guna2HtmlLabel3.Location = new Point(16, 13);
             guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             guna2HtmlLabel3.Size = new Size(139, 23);
             guna2HtmlLabel3.TabIndex = 16;
@@ -280,7 +284,7 @@
             // 
             // guna2Panel1
             // 
-            guna2Panel1.BackColor = SystemColors.Control;
+            guna2Panel1.BackColor = Color.White;
             guna2Panel1.BorderRadius = 10;
             guna2Panel1.Controls.Add(txtApellidos);
             guna2Panel1.Controls.Add(guna2Button1);
@@ -295,10 +299,10 @@
             guna2Panel1.Controls.Add(guna2HtmlLabel4);
             guna2Panel1.Controls.Add(guna2HtmlLabel3);
             guna2Panel1.CustomizableEdges = customizableEdges13;
-            guna2Panel1.Location = new Point(16, 65);
+            guna2Panel1.Location = new Point(16, 84);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            guna2Panel1.Size = new Size(972, 315);
+            guna2Panel1.Size = new Size(972, 304);
             guna2Panel1.TabIndex = 28;
             // 
             // guna2Panel2
@@ -306,10 +310,10 @@
             guna2Panel2.Controls.Add(guna2DataGridView1);
             guna2Panel2.Controls.Add(guna2HtmlLabel11);
             guna2Panel2.CustomizableEdges = customizableEdges15;
-            guna2Panel2.Location = new Point(16, 386);
+            guna2Panel2.Location = new Point(16, 403);
             guna2Panel2.Name = "guna2Panel2";
             guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna2Panel2.Size = new Size(972, 329);
+            guna2Panel2.Size = new Size(972, 312);
             guna2Panel2.TabIndex = 29;
             // 
             // guna2DataGridView1
@@ -385,15 +389,26 @@
             guna2HtmlLabel11.TabIndex = 5;
             guna2HtmlLabel11.Text = "Docentes Registrados";
             // 
+            // guna2Panel3
+            // 
+            guna2Panel3.BackColor = Color.White;
+            guna2Panel3.Controls.Add(guna2HtmlLabel1);
+            guna2Panel3.Controls.Add(guna2HtmlLabel2);
+            guna2Panel3.CustomizableEdges = customizableEdges17;
+            guna2Panel3.Location = new Point(1, 1);
+            guna2Panel3.Name = "guna2Panel3";
+            guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            guna2Panel3.Size = new Size(989, 62);
+            guna2Panel3.TabIndex = 16;
+            // 
             // FrmDocente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1002, 727);
+            Controls.Add(guna2Panel3);
             Controls.Add(guna2Panel2);
             Controls.Add(guna2Panel1);
-            Controls.Add(guna2HtmlLabel2);
-            Controls.Add(guna2HtmlLabel1);
             Name = "FrmDocente";
             Text = "FrmDocente";
             guna2Panel1.ResumeLayout(false);
@@ -401,8 +416,9 @@
             guna2Panel2.ResumeLayout(false);
             guna2Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).EndInit();
+            guna2Panel3.ResumeLayout(false);
+            guna2Panel3.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -427,5 +443,6 @@
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
         private DataGridViewButtonColumn btnModificar;
         private DataGridViewButtonColumn eliminar;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
     }
 }

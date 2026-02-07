@@ -49,6 +49,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             guna2HtmlLabel18 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -76,10 +78,12 @@
             guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             guna2GradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nruCantidad).BeginInit();
             guna2GradientPanel1.SuspendLayout();
+            guna2Panel1.SuspendLayout();
             SuspendLayout();
             // 
             // guna2GradientPanel2
@@ -87,10 +91,10 @@
             guna2GradientPanel2.Controls.Add(guna2HtmlLabel18);
             guna2GradientPanel2.Controls.Add(guna2DataGridView1);
             guna2GradientPanel2.CustomizableEdges = customizableEdges1;
-            guna2GradientPanel2.Location = new Point(12, 375);
+            guna2GradientPanel2.Location = new Point(12, 394);
             guna2GradientPanel2.Name = "guna2GradientPanel2";
             guna2GradientPanel2.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2GradientPanel2.Size = new Size(959, 328);
+            guna2GradientPanel2.Size = new Size(978, 309);
             guna2GradientPanel2.TabIndex = 4;
             // 
             // guna2HtmlLabel18
@@ -277,6 +281,7 @@
             // 
             // guna2GradientPanel1
             // 
+            guna2GradientPanel1.BackColor = Color.White;
             guna2GradientPanel1.Controls.Add(guna2HtmlLabel12);
             guna2GradientPanel1.Controls.Add(guna2HtmlLabel13);
             guna2GradientPanel1.Controls.Add(guna2HtmlLabel14);
@@ -292,10 +297,10 @@
             guna2GradientPanel1.Controls.Add(cmbLab);
             guna2GradientPanel1.Controls.Add(cmbDocente);
             guna2GradientPanel1.CustomizableEdges = customizableEdges17;
-            guna2GradientPanel1.Location = new Point(12, 73);
+            guna2GradientPanel1.Location = new Point(12, 81);
             guna2GradientPanel1.Name = "guna2GradientPanel1";
             guna2GradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            guna2GradientPanel1.Size = new Size(959, 296);
+            guna2GradientPanel1.Size = new Size(978, 296);
             guna2GradientPanel1.TabIndex = 2;
             // 
             // guna2HtmlLabel12
@@ -362,7 +367,7 @@
             // 
             guna2HtmlLabel10.BackColor = Color.Transparent;
             guna2HtmlLabel10.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel10.Location = new Point(22, 3);
+            guna2HtmlLabel10.Location = new Point(13, 6);
             guna2HtmlLabel10.Name = "guna2HtmlLabel10";
             guna2HtmlLabel10.Size = new Size(232, 23);
             guna2HtmlLabel10.TabIndex = 17;
@@ -442,7 +447,7 @@
             // 
             guna2HtmlLabel2.BackColor = Color.Transparent;
             guna2HtmlLabel2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel2.Location = new Point(12, 48);
+            guna2HtmlLabel2.Location = new Point(13, 30);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             guna2HtmlLabel2.Size = new Size(374, 19);
             guna2HtmlLabel2.TabIndex = 5;
@@ -452,19 +457,30 @@
             // 
             guna2HtmlLabel11.BackColor = Color.Transparent;
             guna2HtmlLabel11.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel11.Location = new Point(12, 10);
+            guna2HtmlLabel11.Location = new Point(13, 3);
             guna2HtmlLabel11.Name = "guna2HtmlLabel11";
             guna2HtmlLabel11.Size = new Size(198, 32);
             guna2HtmlLabel11.TabIndex = 6;
             guna2HtmlLabel11.Text = "Gestión de Reservas";
+            // 
+            // guna2Panel1
+            // 
+            guna2Panel1.BackColor = Color.White;
+            guna2Panel1.Controls.Add(guna2HtmlLabel11);
+            guna2Panel1.Controls.Add(guna2HtmlLabel2);
+            guna2Panel1.CustomizableEdges = customizableEdges19;
+            guna2Panel1.Location = new Point(0, 1);
+            guna2Panel1.Name = "guna2Panel1";
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            guna2Panel1.Size = new Size(1020, 63);
+            guna2Panel1.TabIndex = 7;
             // 
             // FrmReservas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1002, 727);
-            Controls.Add(guna2HtmlLabel11);
-            Controls.Add(guna2HtmlLabel2);
+            Controls.Add(guna2Panel1);
             Controls.Add(guna2GradientPanel1);
             Controls.Add(guna2GradientPanel2);
             Name = "FrmReservas";
@@ -475,8 +491,9 @@
             ((System.ComponentModel.ISupportInitialize)nruCantidad).EndInit();
             guna2GradientPanel1.ResumeLayout(false);
             guna2GradientPanel1.PerformLayout();
+            guna2Panel1.ResumeLayout(false);
+            guna2Panel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -507,5 +524,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel17;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel18;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
     }
 }
