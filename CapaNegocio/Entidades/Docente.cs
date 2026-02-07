@@ -104,7 +104,8 @@ namespace CapaNegocio.Entidades
 
         public override string ToString()
         {
-            return $"{IdDocente};{Cedula};{Nombres};{Apellidos};{Especialidad};{Estado}";
+            string estado = Estado ? "Activo" : "Inactivo";
+            return $"{IdDocente};{Cedula};{Nombres};{Apellidos};{Especialidad};{estado}";
         }
     }
 }

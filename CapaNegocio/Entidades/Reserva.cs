@@ -91,6 +91,7 @@ namespace CapaNegocio.Entidades
 
         public override string ToString()
         {
+            string estado = Estado == 1 ? "Activa" : (Estado == 2 ? "Cancelada" : "Finalizada");
             return $"{IdReserva};{IdDocente};{IdLaboratorio};{Asunto};{CantidadEstudiantes};{FechaReserva};{Horario};{Estado}";
         }
     }

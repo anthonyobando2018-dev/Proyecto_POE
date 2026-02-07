@@ -91,14 +91,14 @@ namespace CapaPresentacion.Formularios
             {
                 // obtenemos los valores de los campos del formulario
                 string cedula = txtCedula.Text.Trim();
-                string nombres = txtEspecialidad.Text.Trim();
+                string nombres = txtNombres.Text.Trim();
                 string apellidos = txtApellidos.Text.Trim();
-                string especialidad = txtNombres.Text.Trim();
+                string especialidad = txtEspecialidad.Text.Trim();
 
                 // llamamos al metodo del servicio que guarda el registro
-                var idNuevoEstudiante = _docenteServicio.Registrar(cedula, nombres, apellidos, especialidad);
+                var idNuevoDocente = _docenteServicio.Registrar(cedula, nombres, apellidos, especialidad);
 
-                MessageBox.Show($"Nuevo estudiante con id: {idNuevoEstudiante} registrado!");
+                MessageBox.Show($"Nuevo docente con id: {idNuevoDocente} registrado!");
 
                 CargarDocentesGrid();
 
@@ -168,9 +168,9 @@ namespace CapaPresentacion.Formularios
 
                     // txtCodigo.Text = ObtenerValorDeColumna(estudianteSeleccionado, "idDocente");
                     txtCedula.Text = ObtenerValorDeColumna(docenteSeleccionado, "cedula");
-                    txtEspecialidad.Text = ObtenerValorDeColumna(docenteSeleccionado, "nombres");
+                    txtNombres.Text = ObtenerValorDeColumna(docenteSeleccionado, "nombres");
                     txtApellidos.Text = ObtenerValorDeColumna(docenteSeleccionado, "apellidos");
-                    txtNombres.Text = ObtenerValorDeColumna(docenteSeleccionado, "especialidad");
+                    txtEspecialidad.Text = ObtenerValorDeColumna(docenteSeleccionado, "especialidad");
                     cmbEstado.SelectedIndex = bool.Parse(ObtenerValorDeColumna(docenteSeleccionado, "estado")) ? 0 : 1;
                 }
             }

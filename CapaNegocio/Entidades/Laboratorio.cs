@@ -84,9 +84,11 @@ namespace CapaNegocio.Entidades
             set { estado = value; }
         }
 
+        
         public override string ToString()
         {
-            return $"{IdLaboratorio};{Nombre};{CapacidadMaxima};{Estado}";
+            string estado = Estado == 1 ? "Activo" : "Inactivo";
+            return $"{IdLaboratorio};{Nombre};{CapacidadMaxima};{estado}";
         }
     } 
 }
