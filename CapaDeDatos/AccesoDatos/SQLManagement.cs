@@ -18,6 +18,7 @@ namespace CapaDeDatos.AccesoDatos
         {
             using (var conexion = _dbConnection.CrearConexion())
             {
+
                 using (var comando = new SqlCommand(nombre_sp, conexion))
                 {
                     comando.CommandType = System.Data.CommandType.StoredProcedure;
@@ -39,31 +40,19 @@ namespace CapaDeDatos.AccesoDatos
         }
 
         // consulta que trae datos de la base de datos (SELECT)
-        internal DataTable EjecutaSP_Query(string nombre_fn, List<Parametro> parametros)
+        internal DataTable EjecutaSP_Query(string nombre_sp, List<Parametro> parametros)
         {
             using (var conexion = _dbConnection.CrearConexion())
             {
-                using (var comando = new SqlCommand())
+                Console.WriteLine("conexion exitos");
+                using (var comando = new SqlCommand(nombre_sp, conexion))
                 {
-                    comando.Connection = conexion;
-                    comando.CommandType = System.Data.CommandType.Text;
-  
+                    comando.CommandType = System.Data.CommandType.StoredProcedure;
+
                     /* Asignacion dinamica de parametros */
-                    StringBuilder cadena_parametros = new StringBuilder();
-                    bool esPrimerParametro = true;
-                    foreach (var parametro in parametros)
-                    {
-                        if (esPrimerParametro)
-                        {
-                            cadena_parametros.Append(parametro.Valor);
-                        }
-                        else
-                        {
-                            cadena_parametros.Append($", {parametro.Valor}");
-                            esPrimerParametro = false;
-                        }
-                    }
-                    comando.CommandText = @$"SELECT * FROM {nombre_fn}({cadena_parametros})";
+                    parametros.ForEach((parametro) =>
+                        comando.Parameters.Add(parametro.Nombre, parametro.TipoDato).Value = parametro.Valor
+                    );
 
                     using (var table = new DataTable())
                     {

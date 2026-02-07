@@ -46,7 +46,7 @@ namespace CapaNegocio.Entidades
             BloqueHorario bloqueHorario,
             int estado)
         {
-            IdReserva = idDocente;
+            IdReserva = idReserva;
             IdDocente = idDocente;
             IdLaboratorio = idLaboratorio;
             Asunto = asunto;
@@ -67,7 +67,7 @@ namespace CapaNegocio.Entidades
         private void ValidarBloqueHorario(BloqueHorario horario)
         {
             if (horario.HoraInicio.AddMinutes(30) > horario.HoraFin || horario.HoraInicio.AddHours(2) < horario.HoraFin)
-                throw new ArgumentException("La sesion minima de una reserva es de 30 minutos y maximo 2 horas");
+                throw new ArgumentException("La sesion minima de una reserva es de minimo 30 minutos y maximo 2 horas");
         }
 
         private void ValidarFechaDeReserva(DateOnly fechaReserva)
@@ -87,6 +87,11 @@ namespace CapaNegocio.Entidades
         {
             if (cantidadEstudiantes <= 10 || cantidadEstudiantes > 100)
                 throw new ArgumentException("La cantidad de estudiantes de la reserva debe ser entre 10 minimo y maximo 100!");
+        }
+
+        public override string ToString()
+        {
+            return $"{IdReserva};{IdDocente};{IdLaboratorio};{Asunto};{CantidadEstudiantes};{FechaReserva};{Horario};{Estado}";
         }
     }
 }

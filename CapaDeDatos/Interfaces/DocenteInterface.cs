@@ -8,9 +8,9 @@ namespace CapaDeDatos.Interfaces
     {
         private readonly SQLManagement _dbQueryManager;
 
-        public DocenteInterface(DBConnection dbConnection)
+        public DocenteInterface(SQLManagement sqlManagement)
         {
-            _dbQueryManager = new SQLManagement(dbConnection);
+            _dbQueryManager = sqlManagement;
         }
 
         public int Guardar(Docente docente)
@@ -18,13 +18,13 @@ namespace CapaDeDatos.Interfaces
             // la sentencia SELECT SCOPE_IDENTITY() permitirá obtener el id generado por el registro
             List<Parametro> parametros = new List<Parametro>()
             {
-               new Parametro("p_nombres", SqlDbType.VarChar, docente.Nombres),
-               new Parametro("p_apellidos", SqlDbType.VarChar, docente.Apellidos),
-               new Parametro("p_cedula", SqlDbType.VarChar, docente.Cedula),
-               new Parametro("p_especialidad", SqlDbType.VarChar, docente.Especialidad)
+               new Parametro("@p_nombres", SqlDbType.VarChar, docente.Nombres),
+               new Parametro("@p_apellidos", SqlDbType.VarChar, docente.Apellidos),
+               new Parametro("@p_cedula", SqlDbType.VarChar, docente.Cedula),
+               new Parametro("@p_especialidad", SqlDbType.VarChar, docente.Especialidad)
             };
 
-            int id_generado = _dbQueryManager.EjecutarSP_Scalar("sp_insertarDocente", parametros);
+            int id_generado = _dbQueryManager.EjecutarSP_Scalar("sp_insertar_docente", parametros);
 
             return id_generado;
         }
@@ -33,10 +33,10 @@ namespace CapaDeDatos.Interfaces
         {
             List<Parametro> parametros = new List<Parametro>()
             {
-               new Parametro("p_cedula", SqlDbType.VarChar, cedulaBuscada)
+               new Parametro("@p_cedula", SqlDbType.VarChar, cedulaBuscada)
             };
 
-            var resultado = _dbQueryManager.EjecutaSP_Query("fn_obtenerDocentePorCedula", parametros);
+            var resultado = _dbQueryManager.EjecutaSP_Query("sp_buscar_docente", parametros);
 
             List<Docente> docentes = new List<Docente>();
 
@@ -57,7 +57,7 @@ namespace CapaDeDatos.Interfaces
 
         public List<Docente> ObtenerTodos()
         {
-            var resultado = _dbQueryManager.EjecutaSP_Query("fn_obtenerDocentesActivos", new List<Parametro>());
+            var resultado = _dbQueryManager.EjecutaSP_Query("sp_listar_docentes_activos", new List<Parametro>());
 
             List<Docente> docentes = new List<Docente>();
 
@@ -76,31 +76,32 @@ namespace CapaDeDatos.Interfaces
             return docentes;
         }
 
-        public bool Actualizar(int id, Docente docente)
+        public bool Actualizar(int idDocente, Docente docente)
         {
            List<Parametro> parametros = new List<Parametro>()
            {
-               new Parametro("p_id_docente", SqlDbType.Int, id),
-               new Parametro("p_nombres", SqlDbType.VarChar, docente.Nombres),
-               new Parametro("p_apellidos", SqlDbType.VarChar, docente.Apellidos),
-               new Parametro("p_cedula", SqlDbType.VarChar, docente.Cedula),
-               new Parametro("p_especialidad", SqlDbType.VarChar, docente.Especialidad),
-               new Parametro("p_estado", SqlDbType.Int, docente.Estado ? 1 : 0)
+               new Parametro("@p_id_docente", SqlDbType.Int, idDocente),
+               new Parametro("@p_nombres", SqlDbType.VarChar, docente.Nombres),
+               new Parametro("@p_apellidos", SqlDbType.VarChar, docente.Apellidos),
+               new Parametro("@p_cedula", SqlDbType.VarChar, docente.Cedula),
+               new Parametro("@p_especialidad", SqlDbType.VarChar, docente.Especialidad),
+               new Parametro("@p_estado", SqlDbType.Int, docente.Estado ? 1 : 0)
            };
 
-            var resultado = _dbQueryManager.EjecutaSP_NonQuery("sp_actualizarDocente", parametros);
+            var resultado = _dbQueryManager.EjecutaSP_NonQuery("sp_actualizar_docente", parametros);
 
             return resultado;
         }
 
-        public bool Eliminar(int id)
+        public bool ActualizarEstado(int idDocente, int estado_docente)
         {
             List<Parametro> parametros = new List<Parametro>()
             {
-               new Parametro("p_id_docente", SqlDbType.Int, id)
+               new Parametro("@p_id_docente", SqlDbType.Int, idDocente),
+               new Parametro("@p_estado",  SqlDbType.Int, estado_docente)
             };
 
-            var resultado = _dbQueryManager.EjecutaSP_NonQuery("sp_eliminarDocentePorId", parametros);
+            var resultado = _dbQueryManager.EjecutaSP_NonQuery("sp_cambiar_estado_docente", parametros);
 
             return resultado;
         }

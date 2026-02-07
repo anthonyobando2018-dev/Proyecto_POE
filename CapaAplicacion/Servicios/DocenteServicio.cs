@@ -27,7 +27,7 @@ namespace CapaAplicacion.Servicios
 
         public void ActualizarDatos(int idDocente, string cedula, string nombres, string apellidos, string especialidad, bool estado)
         {
-            ValidarCedulaDuplicada(cedula);
+            // ValidarCedulaDuplicada(cedula);
             Docente docenteActualizado = new Docente(idDocente, cedula, nombres, apellidos, especialidad, estado);
             _docenteInterface.Actualizar(idDocente, docenteActualizado);
         }
@@ -42,9 +42,14 @@ namespace CapaAplicacion.Servicios
             return _docenteInterface.ObtenerTodos();
         }
 
+        public bool Inactivar(int idDocente)
+        {
+            return _docenteInterface.ActualizarEstado(idDocente, 0);
+        }
+
         private void ValidarCedulaDuplicada(string cedula)
         {
-            if (BuscarPorCedula(cedula) != null)
+            if (_docenteInterface.ObtenerPorCedula(cedula) != null)
                 throw new ApplicationException("La cedula usada ya se encuentra registrada.");
         }
     }

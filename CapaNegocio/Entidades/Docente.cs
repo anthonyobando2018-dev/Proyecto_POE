@@ -101,5 +101,10 @@ namespace CapaNegocio.Entidades
         public string NombreCompleto { get { return $"{Nombres} {Apellidos}"; } }
         public string Especialidad { get { return especialidad; } set { especialidad = value; } }
         public bool Estado { get { return estado; } set { estado = value; } }
+
+        public override string ToString()
+        {
+            return $"{IdDocente};{Cedula};{Nombres};{Apellidos};{Especialidad};{Estado}";
+        }
     }
 }

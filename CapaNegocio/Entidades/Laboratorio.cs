@@ -56,7 +56,7 @@ namespace CapaNegocio.Entidades
 
         private void ValidarCapacidadMaxima(int capacidadMaxima)
         {
-            if (capacidadMax <= 10 || capacidadMax > 100)
+            if (capacidadMaxima <= 10 || capacidadMaxima > 100)
                 throw new ArgumentException("La capacidad del laboratorio debe estar en un rango entre 10 y 100!");
         }
 
@@ -82,6 +82,11 @@ namespace CapaNegocio.Entidades
         {
             get { return estado; }
             set { estado = value; }
+        }
+
+        public override string ToString()
+        {
+            return $"{IdLaboratorio};{Nombre};{CapacidadMaxima};{Estado}";
         }
     } 
 }

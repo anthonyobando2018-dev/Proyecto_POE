@@ -31,33 +31,33 @@ namespace CapaAplicacion.Servicios
         }
 
         /* Validaciones varias que debe cumplir una nueva reserva */
-        public void ValidarReservaNoSolapada(int idDocente, int idLaboratorio, DateOnly fechaReserva, TimeOnly horaInicio, TimeOnly horaFin)
+        public void ValidarReservaNoSolapada(int idDocente, int idLaboratorio, DateOnly fechaReserva, TimeOnly horaInicio, TimeOnly horaFin, int? idReserva = null)
         {
-            ValidarLaboratorioNoOcupado(idLaboratorio, fechaReserva, horaInicio, horaFin);
-            ValidarDocenteNoOcupado(idDocente, fechaReserva, horaInicio, horaFin);
-            ValidarDocenteNoReservaMismoLaboratorioMismaFecha(idDocente, idLaboratorio, fechaReserva);
+            ValidarLaboratorioNoOcupado(idLaboratorio, fechaReserva, horaInicio, horaFin, idReserva);
+            ValidarDocenteNoOcupado(idDocente, fechaReserva, horaInicio, horaFin, idReserva);
+            ValidarDocenteNoReservaMismoLaboratorioMismaFecha(idDocente, idLaboratorio, fechaReserva, idReserva);
         }
 
         /* Valida que el laboratorio no este siendo reservado ya en la franja horaria de la nueva reserva */
-        private void ValidarLaboratorioNoOcupado(int idLaboratorio, DateOnly fechaReserva, TimeOnly horaInicio, TimeOnly horaFin)
+        private void ValidarLaboratorioNoOcupado(int idLaboratorio, DateOnly fechaReserva, TimeOnly horaInicio, TimeOnly horaFin, int? idReserva = null)
         {
-            var reservas = _reservaInterface.FiltrarPorParametros(idLaboratorio: idLaboratorio, fechaEspecifica: fechaReserva);
+            var reservas = _reservaInterface.FiltrarPorParametros(idLaboratorio: idLaboratorio, fechaEspecifica: fechaReserva, estado_reserva: 1, idReservaExcluida: idReserva);
             if (!ReservaEstaAntesODespues(horaInicio, horaFin, reservas))
                 throw new ApplicationException("El laboratorio se encuentra ocupado en esa franja horaria.");
         }
 
         /* Valida que la nueva reserva no solape las reservas actuales del docente */
-        private void ValidarDocenteNoOcupado(int idDocente, DateOnly fechaReserva, TimeOnly horaInicio, TimeOnly horaFin)
+        private void ValidarDocenteNoOcupado(int idDocente, DateOnly fechaReserva, TimeOnly horaInicio, TimeOnly horaFin, int? idReserva = null)
         {
-            var reservas = _reservaInterface.FiltrarPorParametros(idDocente: idDocente, fechaEspecifica: fechaReserva);
+            var reservas = _reservaInterface.FiltrarPorParametros(idDocente: idDocente, fechaEspecifica: fechaReserva, estado_reserva: 1, idReservaExcluida: idReserva);
             if (!ReservaEstaAntesODespues(horaInicio, horaFin, reservas))
                 throw new ApplicationException("El docente tiene reservas en esa franja horaria.");
         }
 
         /* Valida que el docente no reserve un mismo laboratorio en una misma fecha mas de una vez */
-        private void ValidarDocenteNoReservaMismoLaboratorioMismaFecha(int idDocente, int idLaboratorio, DateOnly fechaReserva)
+        private void ValidarDocenteNoReservaMismoLaboratorioMismaFecha(int idDocente, int idLaboratorio, DateOnly fechaReserva, int? idReserva = null)
         {
-            var reservas = _reservaInterface.FiltrarPorParametros(idDocente, idLaboratorio, fechaReserva);
+            var reservas = _reservaInterface.FiltrarPorParametros(idDocente: idDocente, idLaboratorio: idLaboratorio, fechaEspecifica: fechaReserva, estado_reserva: 1, idReservaExcluida: idReserva); 
             if (reservas.Count > 0)
                 throw new ApplicationException("El docente no puede reservar un laboratorio mas de una vez el mismo dia.");
         }

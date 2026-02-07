@@ -36,6 +36,11 @@ namespace CapaAplicacion.Servicios
             return _laboratorioInterface.ObtenerPorId(idLaboratorio) ?? throw new ApplicationException("Laboratorio no encontrado con ese id.");
         }
 
+        public bool Inactivar(int idLaboratorio)
+        {
+            return _laboratorioInterface.ActualizarEstado(idLaboratorio, 0);
+        }
+
         public List<Laboratorio> ListarTodos()
         {
             return _laboratorioInterface.ObtenerTodos();

@@ -27,7 +27,7 @@ namespace CapaNegocio.Entidades
 
         public override string ToString()
         {
-            return $"{HoraFin}-{HoraFin}";
+            return $"{HoraInicio}-{HoraFin}";
         }
     }
 }
